@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15da6e01-7f67-4597-b041-8082c6a990d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final.Project-nabartling-jeshallcross-hwallace-bward.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Final.Project-nabartling-jeshallcross-hwallace-bward.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" afterDir="false" />
-    </list>
+    <list default="true" id="15da6e01-7f67-4597-b041-8082c6a990d8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,14 +18,14 @@
     <session id="795626326">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="15" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -73,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -131,7 +126,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,6 +155,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,7 +231,7 @@
     <frame x="0" y="23" width="1440" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32761088" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3319027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -297,7 +292,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
         </state>
       </provider>
     </entry>
