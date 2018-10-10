@@ -34,8 +34,8 @@ public class mainUI extends Application{
 
         //Grabbing user screen size
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        double screenHeight = screenSize.getHeight()/2;
-        double screenWidth = screenSize.getWidth()/2;
+        double screenHeight = screenSize.getHeight();
+        double screenWidth = screenSize.getWidth();
         //--------------------------------
 
 
@@ -47,20 +47,36 @@ public class mainUI extends Application{
 
 
         TextArea userText = new TextArea("User types here");
-        userText.setPrefWidth(screenWidth*.5);
+        userText.setPrefWidth(screenWidth*.4);
         userText.setPrefHeight(screenHeight-200);
 
 
         TextArea musicPlayer = new TextArea("Music box will be here");
-        musicPlayer.setPrefSize(screenWidth*.4, screenHeight *.2);
+
+        Connection connection = new Connection();
+
+        boolean connectionStatus = connection.findConnection();
+
+        Label networkConnectionLabel = new Label("I am a label");
+
+        //------------Color Loop------------
+        if (connectionStatus){
+            networkConnectionLabel.setText("Connection is Present");
+            networkConnectionLabel.setTextFill(Color.color(0.0,1.0,0.0));
+        }
+        else {
+            networkConnectionLabel.setText("Connection is not Present");
+            networkConnectionLabel.setTextFill(Color.color(1.0,0.0,0.0));
+        }
+        //--------------------------------
         //END USER SIDE
 
         //Component Side
         VBox compSide = new VBox(10);
         TextArea comp1 = new TextArea("Componet 1 area");
         TextArea comp2 = new TextArea("Componet 2 area");
-        comp1.setPrefSize(screenWidth*.6,screenHeight-200);
-        comp2.setPrefSize(screenWidth*.6,screenHeight-200);
+        comp1.setPrefSize(screenWidth*.7,screenHeight-200);
+        comp2.setPrefSize(screenWidth*.7,screenHeight-200);
 
         compSide.getChildren().addAll(comp1,comp2);
         compSide.setAlignment(Pos.CENTER);
@@ -76,7 +92,7 @@ public class mainUI extends Application{
 
         userSide.setAlignment(Pos.CENTER);
         userSide.setPadding(new Insets(10,10,10,10));
-        userSide.getChildren().addAll(userText,musicPlayer);
+        userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
 
         //----------------------
 
