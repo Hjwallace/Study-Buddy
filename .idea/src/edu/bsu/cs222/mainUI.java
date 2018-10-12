@@ -23,6 +23,8 @@ import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
 
 
@@ -101,6 +103,16 @@ public class mainUI extends Application{
 
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
         primaryStage.show();
+
+        //TIMER
+        //Need to edit timing and just throw in the connection thing
+        Timer time = new Timer();
+        time.schedule( new TimerTask() {
+            public void run() {
+                System.out.println("Hi");
+            }
+        }, 0, 60*50);
+        //end timer
 
     }
 }
