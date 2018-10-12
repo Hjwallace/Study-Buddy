@@ -73,10 +73,10 @@ public class mainUI extends Application{
 
         //Component Side
         VBox compSide = new VBox(10);
-        TextArea comp1 = new TextArea("Componet 1 area");
+        TextArea comp1 = new TextArea("Component 1 area");
         TextArea comp2 = new TextArea("Componet 2 area");
-        comp1.setPrefSize(screenWidth*.7,screenHeight-200);
-        comp2.setPrefSize(screenWidth*.7,screenHeight-200);
+        comp1.setPrefSize(screenWidth*.6,screenHeight-200);
+        comp2.setPrefSize(screenWidth*.6,screenHeight-200);
 
         compSide.getChildren().addAll(comp1,comp2);
         compSide.setAlignment(Pos.CENTER);
