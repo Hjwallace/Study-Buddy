@@ -49,6 +49,7 @@ public class mainUI extends Application{
         TextArea userText = new TextArea("User types here");
         userText.setPrefWidth(screenWidth*.4);
         userText.setPrefHeight(screenHeight-200);
+        userText.setWrapText(true);
 
 
         TextArea musicPlayer = new TextArea("Music box will be here");
