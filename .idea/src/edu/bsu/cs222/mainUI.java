@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -17,12 +18,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,8 +99,24 @@ public class mainUI extends Application{
 
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
+
         primaryStage.show();
 
+        primaryStage.setOnCloseRequest((WindowEvent event1) -> {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("WAIT");
+            alert.setHeaderText("Are you sure you want to close?");
+            alert.setContentText("Make sure you have saved and finished everything you wanted :)");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK){
+                //Okay
+                System.out.println("Closing");
+            } else {
+                //Cancel
+                event1.consume();
+            }
+        });
 
 
 
