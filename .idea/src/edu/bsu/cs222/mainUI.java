@@ -46,27 +46,22 @@ public class mainUI extends Application{
 
         //User Side
         VBox userSide = new VBox(10);
-
-
         TextArea userText = new TextArea("User types here");
         userText.setPrefWidth(screenWidth*.4);
         userText.setPrefHeight(screenHeight-200);
         userText.setWrapText(true);
         userSide.setAlignment(Pos.CENTER);
         userSide.setPadding(new Insets(10,10,10,10));
+
+        //Music Box
         TextArea musicPlayer = new TextArea("Music box will be here");
+        //---End Music Box---
 
+        //Conection
         Connection connection = new Connection();
-
         boolean connectionStatus = connection.findConnection();
-
         Label networkConnectionLabel = new Label("I am a label");
-        userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
-
-
-
-
-        //------------Color Loop------------
+        //------------Color Loop for Connection Label------------
         if (connectionStatus){
             networkConnectionLabel.setText("Connection is Present");
             networkConnectionLabel.setTextFill(Color.color(0.0,1.0,0.0));
@@ -75,7 +70,10 @@ public class mainUI extends Application{
             networkConnectionLabel.setText("Connection is not Present");
             networkConnectionLabel.setTextFill(Color.color(1.0,0.0,0.0));
         }
-        //--------------------------------
+        //-----End Connection-------
+
+        userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
+
         //END USER SIDE
 
         //Component Side
@@ -88,20 +86,15 @@ public class mainUI extends Application{
         compSide.getChildren().addAll(comp1,comp2);
         compSide.setAlignment(Pos.CENTER);
         compSide.setPadding(new Insets(10,10,10,10));
-
         //END COMP SIDE
 
 
 
-        //Add all componets
+        //Line Seperator
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX(screenWidth/2).endY(screenHeight).fill(Color.BLACK).build();
-
-
-
         //----------------------
 
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
-
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
         primaryStage.show();
 
