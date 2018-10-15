@@ -85,7 +85,6 @@ public class mainUI extends Application{
         compSide.setAlignment(Pos.CENTER);
         compSide.setPadding(new Insets(10,10,10,10));
 
-
         //END COMP SIDE
 
 
@@ -102,17 +101,11 @@ public class mainUI extends Application{
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
 
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
+        primaryStage.setFullScreen(true);
         primaryStage.show();
 
-        //TIMER
-        //Need to edit timing and just throw in the connection thing
-        Timer time = new Timer();
-        time.schedule( new TimerTask() {
-            public void run() {
-                System.out.println("Hi");
-            }
-        }, 0, 60*50);
-        //end timer
+
+
 
     }
 }
