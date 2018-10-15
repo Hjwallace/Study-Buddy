@@ -52,8 +52,8 @@ public class mainUI extends Application{
         userText.setPrefWidth(screenWidth*.4);
         userText.setPrefHeight(screenHeight-200);
         userText.setWrapText(true);
-
-
+        userSide.setAlignment(Pos.CENTER);
+        userSide.setPadding(new Insets(10,10,10,10));
         TextArea musicPlayer = new TextArea("Music box will be here");
 
         Connection connection = new Connection();
@@ -61,6 +61,10 @@ public class mainUI extends Application{
         boolean connectionStatus = connection.findConnection();
 
         Label networkConnectionLabel = new Label("I am a label");
+        userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
+
+
+
 
         //------------Color Loop------------
         if (connectionStatus){
@@ -92,16 +96,13 @@ public class mainUI extends Application{
         //Add all componets
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX(screenWidth/2).endY(screenHeight).fill(Color.BLACK).build();
 
-        userSide.setAlignment(Pos.CENTER);
-        userSide.setPadding(new Insets(10,10,10,10));
-        userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
+
 
         //----------------------
 
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
 
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
-        primaryStage.setFullScreen(true);
         primaryStage.show();
 
 
