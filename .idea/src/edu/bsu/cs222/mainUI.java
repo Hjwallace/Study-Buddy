@@ -22,6 +22,7 @@ import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
@@ -100,8 +101,16 @@ public class mainUI extends Application{
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
 
+
+        //CSS Implement
+        String css = this.getClass().getResource("style.css").toExternalForm();
+        mainWindow.getStylesheets().add(css);
+        //CSS end
+
         primaryStage.show();
 
+
+        //Alert for closing window
         primaryStage.setOnCloseRequest((WindowEvent event1) -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("WAIT");
@@ -117,6 +126,8 @@ public class mainUI extends Application{
                 event1.consume();
             }
         });
+        //END OF ALERT CODE
+
 
 
 
