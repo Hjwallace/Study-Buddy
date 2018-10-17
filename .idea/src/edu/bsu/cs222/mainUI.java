@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -22,7 +23,6 @@ import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Menu;
 import java.awt.MenuBar;
 import java.io.File;
 import java.io.IOException;
@@ -46,12 +46,22 @@ public class mainUI extends Application{
         double screenWidth = screenSize.getWidth();
         //--------------------------------
 
-
+        VBox MAINERWINDOW = new VBox();
         //Main Box
         HBox mainWindow = new HBox();
 
-        MenuBar menuBar = new MenuBar(); //Makes a menu bar
-        Menu menuFile = new Menu(); //file menu option
+        javafx.scene.control.MenuBar menuBar = new javafx.scene.control.MenuBar();
+
+        //MenuBar menuBar = new MenuBar(); //Makes a menu bar
+        //Menu menuFile = new Menu(); //file menu option
+        //Menu menuEdit = new Menu(); //edit menu option
+        //Menu menuView = new Menu(); //view menu option
+
+        Menu menuFile = new Menu("File");
+        Menu menuEdit = new Menu("Edit");
+        Menu menuView = new Menu("View");
+
+        menuBar.getMenus().addAll(menuFile,menuEdit,menuView);
 
         //User Side
         VBox userSide = new VBox(10);
@@ -104,12 +114,13 @@ public class mainUI extends Application{
         //----------------------
 
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
-        primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
+        MAINERWINDOW.getChildren().addAll(menuBar,mainWindow);
+        primaryStage.setScene(new Scene(MAINERWINDOW,screenWidth,screenHeight));
 
 
         //CSS Implement
         String css = this.getClass().getResource("style.css").toExternalForm();
-        mainWindow.getStylesheets().add(css);
+        MAINERWINDOW.getStylesheets().add(css);
         //CSS end
 
         primaryStage.show();
