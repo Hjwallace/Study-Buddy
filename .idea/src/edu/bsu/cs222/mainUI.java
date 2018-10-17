@@ -43,7 +43,9 @@ public class mainUI extends Application{
         //Grabbing user screen size
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double screenHeight = screenSize.getHeight();
+            screenHeight = screenHeight *.9;
         double screenWidth = screenSize.getWidth();
+            screenWidth = screenWidth *.9;
         //--------------------------------
 
 
