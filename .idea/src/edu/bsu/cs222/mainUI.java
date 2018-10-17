@@ -22,6 +22,8 @@ import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Menu;
+import java.awt.MenuBar;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -47,6 +49,9 @@ public class mainUI extends Application{
 
         //Main Box
         HBox mainWindow = new HBox();
+
+        MenuBar menuBar = new MenuBar(); //Makes a menu bar
+        Menu menuFile = new Menu(); //file menu option
 
         //User Side
         VBox userSide = new VBox(10);
