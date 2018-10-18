@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -22,7 +23,6 @@ import javafx.stage.WindowEvent;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Menu;
 import java.awt.MenuBar;
 import java.io.File;
 import java.io.IOException;
@@ -48,21 +48,29 @@ public class mainUI extends Application{
             screenWidth = screenWidth *.9;
         //--------------------------------
 
-
+        VBox MAINERWINDOW = new VBox();
         //Main Box
         HBox mainWindow = new HBox();
 
-        MenuBar menuBar = new MenuBar(); //Makes a menu bar
-        Menu menuFile = new Menu(); //file menu option
+        javafx.scene.control.MenuBar menuBar = new javafx.scene.control.MenuBar();
+
+        Menu menuFile = new Menu("File");
+        Menu menuEdit = new Menu("Edit");
+        Menu menuView = new Menu("View");
+        Menu menuHelp = new Menu("Help"); //Use this button to give info at some point
+
+        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuHelp);
 
         //User Side
         VBox userSide = new VBox(10);
         TextArea userText = new TextArea("User types here");
-        userText.setPrefWidth(screenWidth*.4);
+        userText.setPrefWidth(screenWidth*.3);
         userText.setPrefHeight(screenHeight-200);
         userText.setWrapText(true);
         userSide.setAlignment(Pos.CENTER);
         userSide.setPadding(new Insets(10,10,10,10));
+
+
 
         //Music Box
         TextArea musicPlayer = new TextArea("Music box will be here");
@@ -85,14 +93,18 @@ public class mainUI extends Application{
 
         userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
 
+
         //END USER SIDE
 
         //Component Side
         VBox compSide = new VBox(10);
         TextArea comp1 = new TextArea("Component 1 area");
         TextArea comp2 = new TextArea("Componet 2 area");
-        comp1.setPrefSize(screenWidth*.6,screenHeight-200);
-        comp2.setPrefSize(screenWidth*.6,screenHeight-200);
+
+        comp1.setPrefSize(screenWidth*.7,screenHeight-400);
+        comp2.setPrefSize(screenWidth*.7,screenHeight-500);
+
+
 
         compSide.getChildren().addAll(comp1,comp2);
         compSide.setAlignment(Pos.CENTER);
@@ -106,12 +118,13 @@ public class mainUI extends Application{
         //----------------------
 
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
-        primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
+        MAINERWINDOW.getChildren().addAll(menuBar,mainWindow);
+        primaryStage.setScene(new Scene(MAINERWINDOW,screenWidth,screenHeight));
 
 
         //CSS Implement
         String css = this.getClass().getResource("style.css").toExternalForm();
-        mainWindow.getStylesheets().add(css);
+        MAINERWINDOW.getStylesheets().add(css);
         //CSS end
 
         primaryStage.show();
