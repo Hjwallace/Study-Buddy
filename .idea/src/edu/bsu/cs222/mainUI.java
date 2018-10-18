@@ -4,6 +4,7 @@ package edu.bsu.cs222;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -13,11 +14,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -64,10 +69,10 @@ public class mainUI extends Application{
         //User Side
         VBox userSide = new VBox(10);
         TextArea userText = new TextArea("User types here");
-        userText.setPrefWidth(screenWidth*.3);
-        userText.setPrefHeight(screenHeight-200);
+        userText.setPrefWidth(screenWidth*.4);
+        userText.setPrefHeight(screenHeight- (screenHeight*.72));
         userText.setWrapText(true);
-        userSide.setAlignment(Pos.CENTER);
+        userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
 
 
@@ -98,16 +103,20 @@ public class mainUI extends Application{
 
         //Component Side
         VBox compSide = new VBox(10);
-        TextArea comp1 = new TextArea("Component 1 area");
-        TextArea comp2 = new TextArea("Componet 2 area");
+        WebView comp1 = new WebView();
+        WebEngine engine1 = comp1.getEngine();
+        WebView comp2 = new WebView();
+        WebEngine engine2 = comp2.getEngine();
 
-        comp1.setPrefSize(screenWidth*.7,screenHeight-400);
-        comp2.setPrefSize(screenWidth*.7,screenHeight-500);
+        comp1.setStyle("-fx-background-color: rgba(255,255,255, .5);");
+
+        comp1.setPrefSize(screenWidth*.5,screenHeight-(screenHeight*.8078));
+        comp2.setPrefSize(screenWidth*.5,screenHeight-(screenHeight*.8078));
 
 
 
         compSide.getChildren().addAll(comp1,comp2);
-        compSide.setAlignment(Pos.CENTER);
+        compSide.setAlignment(Pos.TOP_RIGHT);
         compSide.setPadding(new Insets(10,10,10,10));
         //END COMP SIDE
 
