@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
@@ -58,12 +59,40 @@ public class mainUI extends Application{
 
         javafx.scene.control.MenuBar menuBar = new javafx.scene.control.MenuBar();
 
+
+
+        //File Options--------------------------
         Menu menuFile = new Menu("File");
+
+        //Open button
+        MenuItem openFile = new MenuItem("Open File");
+        openFile.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("The open file button works");
+            }
+        });
+
+        //Save Button
+        MenuItem saveFile = new MenuItem("Save File");
+        saveFile.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("The save file button works");
+            }
+        });
+
+
+        menuFile.getItems().addAll(openFile,saveFile);
+        //End File options------------------------
+
         Menu menuEdit = new Menu("Edit");
         Menu menuView = new Menu("View");
+        Menu menuWindowOne = new Menu("Window 1");
+        Menu menuWindowTwo = new Menu("Window 2");
+
         Menu menuHelp = new Menu("Help"); //Use this button to give info at some point
 
-        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuHelp);
+        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuHelp);
+
 
         //User Side
         VBox userSide = new VBox(10);
