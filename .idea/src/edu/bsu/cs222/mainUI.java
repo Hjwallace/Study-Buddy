@@ -29,6 +29,7 @@ import javafx.stage.WindowEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.MenuBar;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,9 +49,7 @@ public class mainUI extends Application{
         //Grabbing user screen size
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double screenHeight = screenSize.getHeight();
-            screenHeight = screenHeight *.9;
         double screenWidth = screenSize.getWidth();
-            screenWidth = screenWidth *.9;
         //--------------------------------
 
         VBox MAINERWINDOW = new VBox();
@@ -70,7 +69,7 @@ public class mainUI extends Application{
         VBox userSide = new VBox(10);
         TextArea userText = new TextArea("User types here");
         userText.setPrefWidth(screenWidth*.4);
-        userText.setPrefHeight(screenHeight- (screenHeight*.72));
+        userText.setPrefHeight(screenHeight- (screenHeight*.375));
         userText.setWrapText(true);
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
@@ -107,14 +106,18 @@ public class mainUI extends Application{
         WebEngine engine1 = comp1.getEngine();
         WebView comp2 = new WebView();
         WebEngine engine2 = comp2.getEngine();
+        engine1.setJavaScriptEnabled(true);
+        engine2.setJavaScriptEnabled(false);
+        comp1.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
+        comp2.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
 
-        comp1.setStyle("-fx-background-color: rgba(255,255,255, .5);");
-
-        comp1.setPrefSize(screenWidth*.5,screenHeight-(screenHeight*.8078));
-        comp2.setPrefSize(screenWidth*.5,screenHeight-(screenHeight*.8078));
+        engine1.load("https://www.google.com");
+        engine2.load("https://www.wikipedia.org");
 
 
 
+        engine1.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
+        engine2.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         compSide.getChildren().addAll(comp1,comp2);
         compSide.setAlignment(Pos.TOP_RIGHT);
         compSide.setPadding(new Insets(10,10,10,10));
@@ -126,6 +129,7 @@ public class mainUI extends Application{
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX(screenWidth/2).endY(screenHeight).fill(Color.BLACK).build();
         //----------------------
 
+        userSide.setFillWidth(true);
         mainWindow.getChildren().addAll(userSide,seperator,compSide);
         MAINERWINDOW.getChildren().addAll(menuBar,mainWindow);
         primaryStage.setScene(new Scene(MAINERWINDOW,screenWidth,screenHeight));
