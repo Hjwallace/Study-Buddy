@@ -40,59 +40,46 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
 
-
 public class mainUI extends Application{
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        //Grabbing user screen size
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double screenHeight = screenSize.getHeight();
         double screenWidth = screenSize.getWidth();
-        //--------------------------------
 
-        VBox MAINERWINDOW = new VBox();
-        //Main Box
-        HBox mainWindow = new HBox();
+        primaryStage.setTitle("Study Buddy v1");
+        VBox mainWindow = new VBox();
+        HBox componentWindow = new HBox();
 
         javafx.scene.control.MenuBar menuBar = new javafx.scene.control.MenuBar();
 
-
+        Menu menuEdit = new Menu("Edit");
+        Menu menuView = new Menu("View");
+        Menu menuWindowOne = new Menu("Window 1");
+        Menu menuWindowTwo = new Menu("Window 2");
+        Menu menuHelp = new Menu("Help");
 
         //File Options--------------------------
         Menu menuFile = new Menu("File");
-
-        //Open button
         MenuItem openFile = new MenuItem("Open File");
         openFile.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
                 System.out.println("The open file button works");
             }
         });
-
-        //Save Button
         MenuItem saveFile = new MenuItem("Save File");
         saveFile.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
                 System.out.println("The save file button works");
             }
         });
-
-
         menuFile.getItems().addAll(openFile,saveFile);
         //End File options------------------------
 
-        Menu menuEdit = new Menu("Edit");
-        Menu menuView = new Menu("View");
-        Menu menuWindowOne = new Menu("Window 1");
-        Menu menuWindowTwo = new Menu("Window 2");
-
-        Menu menuHelp = new Menu("Help"); //Use this button to give info at some point
 
         menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuHelp);
-
 
         //User Side
         VBox userSide = new VBox(10);
@@ -103,8 +90,6 @@ public class mainUI extends Application{
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
 
-
-
         //Music Box
         TextArea musicPlayer = new TextArea("Music box will be here");
         //---End Music Box---
@@ -112,7 +97,7 @@ public class mainUI extends Application{
         //Conection
         Connection connection = new Connection();
         boolean connectionStatus = connection.findConnection();
-        Label networkConnectionLabel = new Label("I am a label");
+        Label networkConnectionLabel = new Label();
         //------------Color Loop for Connection Label------------
         if (connectionStatus){
             networkConnectionLabel.setText("Connection is Present");
@@ -125,49 +110,43 @@ public class mainUI extends Application{
         //-----End Connection-------
 
         userSide.getChildren().addAll(userText,musicPlayer,networkConnectionLabel);
-
-
         //END USER SIDE
 
         //Component Side
-        VBox compSide = new VBox(10);
-        WebView comp1 = new WebView();
-        WebEngine engine1 = comp1.getEngine();
-        WebView comp2 = new WebView();
-        WebEngine engine2 = comp2.getEngine();
+        VBox componentSide = new VBox(10);
+        WebView component1 = new WebView();
+        WebEngine engine1 = component1.getEngine();
+        WebView component2 = new WebView();
+        WebEngine engine2 = component2.getEngine();
         engine1.setJavaScriptEnabled(true);
         engine2.setJavaScriptEnabled(false);
-        comp1.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
-        comp2.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
-
+        component1.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
+        component2.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
+        engine1.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
+        engine2.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         engine1.load("https://www.google.com");
         engine2.load("https://www.wikipedia.org");
 
-
-
-        engine1.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
-        engine2.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
-        compSide.getChildren().addAll(comp1,comp2);
-        compSide.setAlignment(Pos.TOP_RIGHT);
-        compSide.setPadding(new Insets(10,10,10,10));
+        componentSide.getChildren().addAll(component1,component2);
+        componentSide.setAlignment(Pos.TOP_RIGHT);
+        componentSide.setPadding(new Insets(10,10,10,10));
         //END COMP SIDE
 
-
-
         //Line Seperator
+        @SuppressWarnings("depreiciated")
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX(screenWidth/2).endY(screenHeight).fill(Color.BLACK).build();
         //----------------------
 
         userSide.setFillWidth(true);
-        mainWindow.getChildren().addAll(userSide,seperator,compSide);
-        MAINERWINDOW.getChildren().addAll(menuBar,mainWindow);
-        primaryStage.setScene(new Scene(MAINERWINDOW,screenWidth,screenHeight));
-
+        componentWindow.getChildren().addAll(userSide,seperator,componentSide);
+        mainWindow.getChildren().addAll(menuBar,componentWindow);
+        primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
 
         //CSS Implement
-        String css = this.getClass().getResource("style.css").toExternalForm();
-        MAINERWINDOW.getStylesheets().add(css);
+        String style = this.getClass().getResource("style.css").toExternalForm();
+        mainWindow.getStylesheets().add(style);
         //CSS end
+
 
         primaryStage.show();
 
@@ -177,14 +156,12 @@ public class mainUI extends Application{
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("WAIT");
             alert.setHeaderText("Are you sure you want to close?");
-            alert.setContentText("Make sure you have saved and finished everything you wanted :)");
+            alert.setContentText("Make sure you have saved and finished everything you wanted!");
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
-                //Okay
                 System.out.println("Closing");
             } else {
-                //Cancel
                 event1.consume();
             }
         });

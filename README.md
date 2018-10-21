@@ -9,7 +9,7 @@ Features:
  Text box with formatting with the ability to open and save to .txt files
  Music Integration
  Two windows for web browsing  
-   Supports video players
+ Supports video players
 ```
 # Idea
 ```
@@ -22,3 +22,4 @@ Study Buddy is an all in one suite that promises its user the fastest and cleane
 When all is done, the user can export whatever content they have created in the text box and save it where ever need be so that they can use it for future projects or store it for later use.
 ```
 
+To run the program, JDK 1.8 must be set to the default SDK. To do this, go to FILE> PROJECT STRUCTURE> SDK> make sure a version of JDK1.8 is installed and selected.
