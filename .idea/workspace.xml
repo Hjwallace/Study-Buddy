@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15da6e01-7f67-4597-b041-8082c6a990d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,7 +115,11 @@
           <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.rebase" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -126,10 +127,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+            <state relative-caret-position="-646">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#5209#5242#1" expanded="true" />
               </folding>
             </state>
@@ -236,7 +236,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540164058530" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540166680811" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TWP_nabartling-jeshallcross-mwilliams16" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -344,13 +344,20 @@
       <option name="project" value="LOCAL" />
       <updated>1540163922707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changing variable names to be more meaningful and did last bit of organizing">
+      <created>1540164152612</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540164152612</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09926224" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09926224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -360,14 +367,14 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49832326" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49966466" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3292683" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.3292683" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50033534" side_tool="true" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32152975" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -485,10 +492,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+        <state relative-caret-position="-646">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#5209#5242#1" expanded="true" />
           </folding>
         </state>
