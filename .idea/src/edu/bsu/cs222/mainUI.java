@@ -149,9 +149,9 @@ public class mainUI extends Application{
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double height = newValue.doubleValue();
-                component1.setPrefHeight(height/2.5);
-                component2.setPrefHeight(height/2.5);
-                userText.setPrefHeight(height/3);
+                component1.setPrefHeight(height/2.3);
+                component2.setPrefHeight(height/2.3);
+                userText.setPrefHeight(height/2);
                 musicPlayer.setPrefHeight(height/5);
             }
         });
@@ -161,9 +161,9 @@ public class mainUI extends Application{
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double width = newValue.doubleValue();
                 component1.setPrefWidth(width/1.5);
-                component2.setPrefHeight(width/1.5);
-                userText.setPrefHeight(width/1.5);
-                musicPlayer.setPrefHeight(width/1.5);
+                component2.setPrefWidth(width/1.5);
+                userText.setPrefWidth(width/1.9);
+                musicPlayer.setPrefWidth(width/1.9);
             }
         });
 
