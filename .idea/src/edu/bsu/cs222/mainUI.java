@@ -84,8 +84,8 @@ public class mainUI extends Application{
         //User Side
         VBox userSide = new VBox(10);
         TextArea userText = new TextArea("User types here");
-        userText.setPrefWidth(screenWidth*.4);
-        userText.setPrefHeight(screenHeight- (screenHeight*.375));
+        userText.setPrefWidth(screenWidth/2);
+        userText.setPrefHeight(screenHeight/1.6);
         userText.setWrapText(true);
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
@@ -120,8 +120,8 @@ public class mainUI extends Application{
         WebEngine engine2 = component2.getEngine();
         engine1.setJavaScriptEnabled(true);
         engine2.setJavaScriptEnabled(false);
-        component1.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
-        component2.setPrefSize(screenWidth*.6,screenHeight-(screenHeight*.575));
+        component1.setPrefSize(screenWidth/2,screenHeight/2.3);
+        component2.setPrefSize(screenWidth/2,screenHeight/2.3);
         engine1.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         engine2.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         engine1.load("https://www.google.com");
