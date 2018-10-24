@@ -2,6 +2,8 @@ package edu.bsu.cs222;
 
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
@@ -28,6 +30,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
 import java.awt.*;
 import java.awt.MenuBar;
 import java.awt.event.MouseEvent;
@@ -48,6 +51,7 @@ public class mainUI extends Application{
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double screenHeight = screenSize.getHeight();
         double screenWidth = screenSize.getWidth();
+
 
         primaryStage.setTitle("Study Buddy v1");
         VBox mainWindow = new VBox();
@@ -84,8 +88,6 @@ public class mainUI extends Application{
         //User Side
         VBox userSide = new VBox(10);
         TextArea userText = new TextArea("User types here");
-        userText.setPrefWidth(screenWidth/2);
-        userText.setPrefHeight(screenHeight/1.6);
         userText.setWrapText(true);
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
@@ -120,8 +122,6 @@ public class mainUI extends Application{
         WebEngine engine2 = component2.getEngine();
         engine1.setJavaScriptEnabled(true);
         engine2.setJavaScriptEnabled(false);
-        component1.setPrefSize(screenWidth/2,screenHeight/2.3);
-        component2.setPrefSize(screenWidth/2,screenHeight/2.3);
         engine1.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         engine2.setUserAgent("Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
         engine1.load("https://www.google.com");
@@ -133,8 +133,7 @@ public class mainUI extends Application{
         //END COMP SIDE
 
         //Line Seperator
-        @SuppressWarnings("depreiciated")
-        Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX(screenWidth/2).endY(screenHeight).fill(Color.BLACK).build();
+        Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
         //----------------------
 
         userSide.setFillWidth(true);
@@ -146,7 +145,27 @@ public class mainUI extends Application{
         String style = this.getClass().getResource("style.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
         //CSS end
+        mainWindow.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                double height = newValue.doubleValue();
+                component1.setPrefHeight(height/2.5);
+                component2.setPrefHeight(height/2.5);
+                userText.setPrefHeight(height/3);
+                musicPlayer.setPrefHeight(height/5);
+            }
+        });
 
+        mainWindow.widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                double width = newValue.doubleValue();
+                component1.setPrefWidth(width/1.5);
+                component2.setPrefHeight(width/1.5);
+                userText.setPrefHeight(width/1.5);
+                musicPlayer.setPrefHeight(width/1.5);
+            }
+        });
 
         primaryStage.show();
 
