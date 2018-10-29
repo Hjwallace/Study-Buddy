@@ -4,8 +4,6 @@
     <list default="true" id="15da6e01-7f67-4597-b041-8082c6a990d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/style.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,14 +63,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="java" value="4225" />
-          <entry key="txt" value="83" />
+          <entry key="java" value="4523" />
+          <entry key="txt" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4225" />
-          <entry key="PLAIN_TEXT" value="89" />
+          <entry key="JAVA" value="4523" />
+          <entry key="PLAIN_TEXT" value="180" />
         </counts>
       </usages-collector>
     </session>
@@ -132,13 +130,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+            <state relative-caret-position="143">
+              <caret line="99" column="47" lean-forward="true" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
               <folding>
-                <element signature="e#2336#2337#0" expanded="true" />
-                <element signature="e#2416#2417#0" expanded="true" />
-                <element signature="e#2594#2595#0" expanded="true" />
-                <element signature="e#2674#2675#0" expanded="true" />
+                <element signature="e#2403#2404#0" expanded="true" />
+                <element signature="e#2483#2484#0" expanded="true" />
+                <element signature="e#2661#2662#0" expanded="true" />
+                <element signature="e#2741#2742#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,7 +225,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540826265351" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540828360023" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -356,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540392604366</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="One new branchy boi.&#10;&#10;Implementing new themes and the ability to swap between them">
+      <created>1540826323682</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540826323682</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -373,7 +378,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4613734" visible="true" weight="0.32791328" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4613734" visible="true" weight="0.32791328" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49966466" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -441,7 +446,8 @@
     <MESSAGE value="Fixing resolution issues and starting to add webpages" />
     <MESSAGE value="Changing variable names to be more meaningful and did last bit of organizing" />
     <MESSAGE value="possible dynamic scaling?" />
-    <option name="LAST_COMMIT_MESSAGE" value="possible dynamic scaling?" />
+    <MESSAGE value="One new branchy boi.&#10;&#10;Implementing new themes and the ability to swap between them" />
+    <option name="LAST_COMMIT_MESSAGE" value="One new branchy boi.&#10;&#10;Implementing new themes and the ability to swap between them" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/Final.Project-nabartling-jeshallcross-hwallace-bward/.idea/src/testing.java" />
@@ -488,13 +494,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/mainUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        <state relative-caret-position="143">
+          <caret line="99" column="47" lean-forward="true" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
           <folding>
-            <element signature="e#2336#2337#0" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2403#2404#0" expanded="true" />
+            <element signature="e#2483#2484#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -84,6 +84,39 @@ public class mainUI extends Application{
         //End File options------------------------
 
 
+        //CSS switching-------------------
+        MenuItem colorBackground = new MenuItem("Color");
+        colorBackground.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("Color Works");
+                mainWindow.getStylesheets().clear();
+                String style = this.getClass().getResource("colorBackground.css").toExternalForm();
+                mainWindow.getStylesheets().add(style);
+
+            }
+        });
+        MenuItem bobRossBackground = new MenuItem("Bob Ross");
+        bobRossBackground.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("Bob Ross works");
+                mainWindow.getStylesheets().clear();
+                String style = this.getClass().getResource("bobRoss.css").toExternalForm();
+                mainWindow.getStylesheets().add(style);
+            }
+        });
+        MenuItem natureBackground = new MenuItem("Nature");
+        natureBackground.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                System.out.println("Nature Works");
+                mainWindow.getStylesheets().clear();
+                String style = this.getClass().getResource("nature.css").toExternalForm();
+                mainWindow.getStylesheets().add(style);
+            }
+        });
+        menuBackgroundSelect.getItems().addAll(colorBackground,bobRossBackground,natureBackground);
+        //End CSS switching---------------
+
+
         menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuBackgroundSelect,menuHelp);
 
         //User Side
