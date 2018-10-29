@@ -64,6 +64,7 @@ public class mainUI extends Application{
         Menu menuWindowOne = new Menu("Window 1");
         Menu menuWindowTwo = new Menu("Window 2");
         Menu menuHelp = new Menu("Help");
+        Menu menuBackgroundSelect = new Menu("Background Select");
 
         //File Options--------------------------
         Menu menuFile = new Menu("File");
@@ -83,7 +84,7 @@ public class mainUI extends Application{
         //End File options------------------------
 
 
-        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuHelp);
+        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuBackgroundSelect,menuHelp);
 
         //User Side
         VBox userSide = new VBox(10);
@@ -142,9 +143,10 @@ public class mainUI extends Application{
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
 
         //CSS Implement
-        String style = this.getClass().getResource("style.css").toExternalForm();
+        String style = this.getClass().getResource("colorBackground.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
         //CSS end
+        
         mainWindow.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
