@@ -88,7 +88,6 @@ public class mainUI extends Application{
         MenuItem colorBackground = new MenuItem("Color");
         colorBackground.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
-                System.out.println("Color Works");
                 mainWindow.getStylesheets().clear();
                 String style = this.getClass().getResource("colorBackground.css").toExternalForm();
                 mainWindow.getStylesheets().add(style);
@@ -98,7 +97,6 @@ public class mainUI extends Application{
         MenuItem bobRossBackground = new MenuItem("Bob Ross");
         bobRossBackground.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
-                System.out.println("Bob Ross works");
                 mainWindow.getStylesheets().clear();
                 String style = this.getClass().getResource("bobRoss.css").toExternalForm();
                 mainWindow.getStylesheets().add(style);
@@ -107,7 +105,6 @@ public class mainUI extends Application{
         MenuItem natureBackground = new MenuItem("Nature");
         natureBackground.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent t) {
-                System.out.println("Nature Works");
                 mainWindow.getStylesheets().clear();
                 String style = this.getClass().getResource("nature.css").toExternalForm();
                 mainWindow.getStylesheets().add(style);
