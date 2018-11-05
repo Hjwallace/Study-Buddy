@@ -1,6 +1,14 @@
 # Final.Project-nabartling-jeshallcross-hwallace-bward
 Final Project
 
+#Team Members
+```
+James Shallcross
+Nick Bartling
+Hunter Wallace
+Bryson Ward
+```
+
 # Study Buddy
 ## An all in one study suite. 
 
@@ -23,3 +31,9 @@ When all is done, the user can export whatever content they have created in the 
 ```
 
 To run the program, JDK 1.8 must be set to the default SDK. To do this, go to FILE> PROJECT STRUCTURE> SDK> make sure a version of JDK1.8 is installed and selected.
+
+
+#Supressed issues
+```
+LineBuilder is deprecated, even though it still works as well as it should.
+```
