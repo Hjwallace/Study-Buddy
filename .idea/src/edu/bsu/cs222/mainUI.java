@@ -36,7 +36,7 @@ public class mainUI extends Application {
         VBox mainWindow = new VBox();
         HBox componentWindow = new HBox();
 
-        //Conection
+        //Connection
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
         //------------Color Loop for Connection Label------------
@@ -78,7 +78,7 @@ public class mainUI extends Application {
                 double height = newValue.doubleValue();
                 components.component1.setPrefHeight(height/2.2);
                 components.component2.setPrefHeight(height/2.2);
-                userComponents.userText.setPrefHeight(height/2);
+                userComponents.textAreaMain.setPrefHeight(height/2);
                 userComponents.musicPlayer.setPrefHeight(height/5);
             }
         });
@@ -89,7 +89,7 @@ public class mainUI extends Application {
                 double width = newValue.doubleValue();
                 components.component1.setPrefWidth(width/1.5);
                 components.component2.setPrefWidth(width/1.5);
-                userComponents.userText.setPrefWidth(width/1.9);
+                userComponents.textAreaMain.setPrefWidth(width/1.9);
                 userComponents.musicPlayer.setPrefWidth(width/1.9);
             }
         });

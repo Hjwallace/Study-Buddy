@@ -105,6 +105,7 @@ public class MenuBarComponent {
         });
         menuFile.getItems().addAll(openFile,saveFile);
         menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuHelp);
+        userComponents.goToGoogleDrive();
         return menuBar;
     }
 }
