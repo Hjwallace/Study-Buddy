@@ -15,7 +15,7 @@ import javafx.scene.web.WebView;
 public class UserSide {
     //String chromeUserAgent = "/Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
 
-    String chromeUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246f";
+    String chromeUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36";
     WebView textAreaMain;
     WebEngine textEngine;
     //TextArea userText;
@@ -26,6 +26,8 @@ public class UserSide {
         textAreaMain = new WebView();
         textEngine = textAreaMain.getEngine();
         textEngine.setJavaScriptEnabled(true);
+        textEngine.setUserAgent(chromeUserAgent);
+        textEngine.load("https://drive.google.com");
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
         userSide.setFillWidth(true);
@@ -34,9 +36,5 @@ public class UserSide {
         userSide.getChildren().addAll(textAreaMain,musicPlayer,connectionLabel);
 
         return userSide;
-    }
-    public void goToGoogleDrive() {
-        textEngine.setUserAgent(chromeUserAgent);
-        textEngine.load("https://drive.google.com");
     }
 }
