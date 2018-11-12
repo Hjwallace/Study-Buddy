@@ -46,14 +46,7 @@ public class MenuBarComponent {
                 webComponents.GoToESPNTop();
             }
         });
-        MenuItem twitchButtonTop = new MenuItem("Twitch");
-        twitchButtonTop.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                webComponents.GoToTwitchTop();
-            }
-        });
-        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, twitchButtonTop);
+        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop);
 
         Menu menuWindowBottom = new Menu("Bottom Window");
         MenuItem youtubeButtonBottom = new MenuItem("Youtube");
@@ -89,6 +82,14 @@ public class MenuBarComponent {
         menuWindowBottom.getItems().addAll(youtubeButtonBottom, googleButtonBottom, bsuButtonBottom, espnButtonBottom);
 
         Menu menuHelp = new Menu("Help");
+        MenuItem getHelpButton = new MenuItem("Get Help");
+        getHelpButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("The get help button works");
+            }
+        });
+        menuHelp.getItems().add(getHelpButton);
 
         Menu menuFile = new Menu("File");
         MenuItem openFile = new MenuItem("Open File");
@@ -104,6 +105,7 @@ public class MenuBarComponent {
             }
         });
         menuFile.getItems().addAll(openFile,saveFile);
+
         menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
         return menuBar;
     }

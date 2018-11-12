@@ -66,9 +66,5 @@ public class ComponentSide {
         engineBottom.setUserAgent(youtubeUserAgent);
         engineBottom.load("https://www.espn.com");
     }
-    public void GoToTwitchTop() {
-        engineTop.setUserAgent(chromiumUserAgent);
-        engineTop.load("https://www.twitch.tv");
 
-    }
 }

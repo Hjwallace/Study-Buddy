@@ -23,7 +23,7 @@ import java.util.Optional;
 
 
 @SuppressWarnings("deprecation")
-public class mainUI extends Application {
+public class MainUI extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -47,13 +47,13 @@ public class mainUI extends Application {
         UserSide userComponents =new UserSide();
         Node userSide = userComponents.UserSideStartup(networkConnectionLabel);
 
-        ComponentSide components = new ComponentSide();
-        Node componentSide = components.ComponentSideStartup();
+        ComponentSide webComponents = new ComponentSide();
+        Node componentSide = webComponents.ComponentSideStartup();
 
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
 
         MenuBarComponent menus = new MenuBarComponent();
-        Node menuBar = menus.MenuStartup(components, userComponents);
+        Node menuBar = menus.MenuStartup(webComponents, userComponents);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
@@ -63,8 +63,8 @@ public class mainUI extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double height = newValue.doubleValue();
-                components.componentTop.setPrefHeight(height/2.2);
-                components.componentBottom.setPrefHeight(height/2.2);
+                webComponents.componentTop.setPrefHeight(height/2.2);
+                webComponents.componentBottom.setPrefHeight(height/2.2);
                 userComponents.textAreaMain.setPrefHeight(height/1.5);
                 userComponents.musicPlayer.setPrefHeight(height/5);
             }
@@ -74,8 +74,8 @@ public class mainUI extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double width = newValue.doubleValue();
-                components.componentTop.setPrefWidth(width/1.7);
-                components.componentBottom.setPrefWidth(width/1.7);
+                webComponents.componentTop.setPrefWidth(width/1.7);
+                webComponents.componentBottom.setPrefWidth(width/1.7);
                 userComponents.textAreaMain.setPrefWidth(width/1.9);
                 userComponents.musicPlayer.setPrefWidth(width/1.9);
             }
