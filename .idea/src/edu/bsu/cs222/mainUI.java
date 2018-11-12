@@ -54,14 +54,11 @@ public class mainUI extends Application {
 
         MenuBarComponent menus = new MenuBarComponent();
         Node menuBar = menus.MenuStartup(components, userComponents);
-
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
-
         String style = this.getClass().getResource("style.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
-
         mainWindow.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
@@ -85,13 +82,11 @@ public class mainUI extends Application {
         });
 
         primaryStage.show();
-
         primaryStage.setOnCloseRequest((WindowEvent event1) -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("WAIT");
             alert.setHeaderText("Are you sure you want to close?");
             alert.setContentText("Make sure you have saved and finished everything you wanted!");
-
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == ButtonType.OK){
                 System.out.println("Closing");
@@ -99,9 +94,5 @@ public class mainUI extends Application {
                 event1.consume();
             }
         });
-
-
-
-
     }
 }
