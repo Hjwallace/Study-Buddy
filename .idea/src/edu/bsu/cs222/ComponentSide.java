@@ -15,60 +15,60 @@ public class ComponentSide {
     String chromeUserAgent = "Mozilla/5.0 (Linux; Android 7.0; SM-G892A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Mobile Safari/537.36";
     String youtubeUserAgent = "Mozilla/5.0 (Linux; Android 4.4.4; One Build/KTU84L.H4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Mobile Safari/537.36";
     String chromiumUserAgent = "/Mozilla5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Mwendo/1.1.5 Safari/537.21";
-    WebView component1;
-    WebView component2;
-    WebEngine engine1;
-    WebEngine engine2;
+    WebView componentTop;
+    WebView componentBottom;
+    WebEngine engineTop;
+    WebEngine engineBottom;
 
     public Node ComponentSideStartup() {
         VBox componentSide = new VBox(10);
-        component1 = new WebView();
-        engine1 = component1.getEngine();
-        component2 = new WebView();
-        engine2 = component2.getEngine();
-        engine1.setJavaScriptEnabled(true);
-        engine2.setJavaScriptEnabled(true);
-        componentSide.getChildren().addAll(component1,component2);
+        componentTop = new WebView();
+        componentBottom = new WebView();
+        engineTop = componentTop.getEngine();
+        engineBottom = componentBottom.getEngine();
+        engineTop.setJavaScriptEnabled(true);
+        engineBottom.setJavaScriptEnabled(true);
+        componentSide.getChildren().addAll(componentTop,componentBottom);
         componentSide.setAlignment(Pos.TOP_RIGHT);
         componentSide.setPadding(new Insets(10,10,10,10));
         return componentSide;
     }
-    public void GoToYoutube1() {
-        engine1.setUserAgent(youtubeUserAgent);
-        engine1.load("https://www.youtube.com");
+    public void GoToYoutubeTop() {
+        engineTop.setUserAgent(youtubeUserAgent);
+        engineTop.load("https://www.youtube.com");
     }
-    public void GoToYoutube2() {
-        engine2.setUserAgent(youtubeUserAgent);
-        engine2.load("https://www.youtube.com");
+    public void GoToYoutubeBottom() {
+        engineBottom.setUserAgent(youtubeUserAgent);
+        engineBottom.load("https://www.youtube.com");
     }
-    public void GoToGoogle1() {
-        engine1.setUserAgent(googleUserAgent);
-        engine1.load("https://www.google.com");
+    public void GoToGoogleTop() {
+        engineTop.setUserAgent(googleUserAgent);
+        engineTop.load("https://www.google.com");
     }
-    public void GoToGoogle2() {
-        engine2.setUserAgent(googleUserAgent);
-        engine2.load("https://www.google.com");
+    public void GoToGoogleBottom() {
+        engineBottom.setUserAgent(googleUserAgent);
+        engineBottom.load("https://www.google.com");
     }
 
-    public void GoToBsu1() {
-        engine1.setUserAgent(googleUserAgent);
-        engine1.load("https://my.bsu.edu/");
+    public void GoToBsuTop() {
+        engineTop.setUserAgent(googleUserAgent);
+        engineTop.load("https://my.bsu.edu/");
     }
-    public void GoToBsu2() {
-        engine2.setUserAgent(googleUserAgent);
-        engine2.load("https://my.bsu.edu/");
+    public void GoToBsuBottom() {
+        engineBottom.setUserAgent(googleUserAgent);
+        engineBottom.load("https://my.bsu.edu/");
     }
-    public void GoToESPN1() {
-        engine1.setUserAgent(googleUserAgent);
-        engine1.load("https://www.espn.com");
+    public void GoToESPNTop() {
+        engineTop.setUserAgent(googleUserAgent);
+        engineTop.load("https://www.espn.com");
     }
-    public void GoToESPN2() {
-        engine2.setUserAgent(youtubeUserAgent);
-        engine2.load("https://www.espn.com");
+    public void GoToESPNBottom() {
+        engineBottom.setUserAgent(youtubeUserAgent);
+        engineBottom.load("https://www.espn.com");
     }
-    public void GoToTwitch1() {
-        engine1.setUserAgent(chromiumUserAgent);
-        engine1.load("https://www.twitch.tv");
+    public void GoToTwitchTop() {
+        engineTop.setUserAgent(chromiumUserAgent);
+        engineTop.load("https://www.twitch.tv");
 
     }
 }

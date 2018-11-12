@@ -43,15 +43,7 @@ public class mainUI extends Application {
         mainWindow.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                boolean connectionStatus = connection.findConnection();
-                if (connectionStatus){
-                    networkConnectionLabel.setText("Connection is Present");
-                    networkConnectionLabel.setTextFill(Color.color(0.0,1.0,0.0));
-                }
-                else {
-                    networkConnectionLabel.setText("Connection is not Present");
-                    networkConnectionLabel.setTextFill(Color.color(1.0,0.0,0.0));
-                }
+                connection.DisplayLabel(networkConnectionLabel);
             }
         });
         UserSide userComponents =new UserSide();
@@ -76,9 +68,9 @@ public class mainUI extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double height = newValue.doubleValue();
-                components.component1.setPrefHeight(height/2.2);
-                components.component2.setPrefHeight(height/2.2);
-                userComponents.textAreaMain.setPrefHeight(height/2);
+                components.componentTop.setPrefHeight(height/2.2);
+                components.componentBottom.setPrefHeight(height/2.2);
+                userComponents.textAreaMain.setPrefHeight(height/1.5);
                 userComponents.musicPlayer.setPrefHeight(height/5);
             }
         });
@@ -87,8 +79,8 @@ public class mainUI extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 double width = newValue.doubleValue();
-                components.component1.setPrefWidth(width/1.5);
-                components.component2.setPrefWidth(width/1.5);
+                components.componentTop.setPrefWidth(width/1.7);
+                components.componentBottom.setPrefWidth(width/1.7);
                 userComponents.textAreaMain.setPrefWidth(width/1.9);
                 userComponents.musicPlayer.setPrefWidth(width/1.9);
             }

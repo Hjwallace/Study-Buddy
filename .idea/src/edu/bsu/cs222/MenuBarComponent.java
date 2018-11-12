@@ -17,76 +17,76 @@ public class MenuBarComponent {
         Menu menuEdit = new Menu("Edit");
         Menu menuView = new Menu("View");
 
-        Menu menuWindowOne = new Menu("Window 1");
-        MenuItem youtubeButton1 = new MenuItem("Youtube");
-        youtubeButton1.setOnAction(new EventHandler<ActionEvent>() {
+        Menu menuWindowTop = new Menu("Top Window");
+        MenuItem youtubeButtonTop = new MenuItem("Youtube");
+        youtubeButtonTop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToYoutube1();
+                webComponents.GoToYoutubeTop();
             }
         });
-        MenuItem googleButton1 = new MenuItem("Google");
-        googleButton1.setOnAction(new EventHandler<ActionEvent>() {
+        MenuItem googleButtonTop = new MenuItem("Google");
+        googleButtonTop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToGoogle1();
+                webComponents.GoToGoogleTop();
             }
         });
-        MenuItem bsuButton1 = new MenuItem("myBSU");
-        bsuButton1.setOnAction(new EventHandler<ActionEvent>() {
+        MenuItem bsuButtonTop = new MenuItem("myBSU");
+        bsuButtonTop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToBsu1();
+                webComponents.GoToBsuTop();
             }
         });
-        MenuItem espnButton1 = new MenuItem("ESPN");
-        espnButton1.setOnAction(new EventHandler<ActionEvent>() {
+        MenuItem espnButtonTop = new MenuItem("ESPN");
+        espnButtonTop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToESPN1();
+                webComponents.GoToESPNTop();
             }
         });
-        MenuItem twitchButton1 = new MenuItem("Twitch");
-        twitchButton1.setOnAction(new EventHandler<ActionEvent>() {
+        MenuItem twitchButtonTop = new MenuItem("Twitch");
+        twitchButtonTop.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToTwitch1();
+                webComponents.GoToTwitchTop();
             }
         });
-        menuWindowOne.getItems().addAll(youtubeButton1, googleButton1, bsuButton1, espnButton1, twitchButton1);
+        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, twitchButtonTop);
 
-        Menu menuWindowTwo = new Menu("Window 2");
-        MenuItem youtubeButton2 = new MenuItem("Youtube");
-        youtubeButton2.setOnAction(new EventHandler<ActionEvent>() {
+        Menu menuWindowBottom = new Menu("Bottom Window");
+        MenuItem youtubeButtonBottom = new MenuItem("Youtube");
+        youtubeButtonBottom.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToYoutube2();
-            }
-        });
-
-        MenuItem googleButton2 = new MenuItem("Google");
-        googleButton2.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                webComponents.GoToGoogle2();
+                webComponents.GoToYoutubeBottom();
             }
         });
 
-        MenuItem bsuButton2 = new MenuItem("myBSU");
-        bsuButton2.setOnAction(new EventHandler<ActionEvent>() {
+        MenuItem googleButtonBottom = new MenuItem("Google");
+        googleButtonBottom.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToBsu2();
+                webComponents.GoToGoogleBottom();
             }
         });
-        MenuItem espnButton2 = new MenuItem("ESPN");
-        espnButton2.setOnAction(new EventHandler<ActionEvent>() {
+
+        MenuItem bsuButtonBottom = new MenuItem("myBSU");
+        bsuButtonBottom.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                webComponents.GoToESPN2();
+                webComponents.GoToBsuBottom();
             }
         });
-        menuWindowTwo.getItems().addAll(youtubeButton2, googleButton2, bsuButton2, espnButton2);
+        MenuItem espnButtonBottom = new MenuItem("ESPN");
+        espnButtonBottom.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                webComponents.GoToESPNBottom();
+            }
+        });
+        menuWindowBottom.getItems().addAll(youtubeButtonBottom, googleButtonBottom, bsuButtonBottom, espnButtonBottom);
 
         Menu menuHelp = new Menu("Help");
 
@@ -104,8 +104,7 @@ public class MenuBarComponent {
             }
         });
         menuFile.getItems().addAll(openFile,saveFile);
-        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowOne,menuWindowTwo,menuHelp);
-        userComponents.goToGoogleDrive();
+        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
         return menuBar;
     }
 }
