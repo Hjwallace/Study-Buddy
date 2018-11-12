@@ -11,9 +11,8 @@ Bryson Ward
 
 # Study Buddy
 ## An all in one study suite. 
-### By James Shallcross, Nick Bartling, Hunter Wallace, Bryson Ward 
 
-Features:
+# Features:
 ```
  Text box with formatting with the ability to open and save to .txt files
  Music Integration
