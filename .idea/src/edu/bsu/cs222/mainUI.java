@@ -36,10 +36,8 @@ public class mainUI extends Application {
         VBox mainWindow = new VBox();
         HBox componentWindow = new HBox();
 
-        //Connection
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
-        //------------Color Loop for Connection Label------------
         mainWindow.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
