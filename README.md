@@ -1,6 +1,14 @@
 # Final.Project-nabartling-jeshallcross-hwallace-bward
 Final Project
 
+#Team Members
+```
+James Shallcross
+Nick Bartling
+Hunter Wallace
+Bryson Ward
+```
+
 # Study Buddy
 ## An all in one study suite. 
 ### By James Shallcross, Nick Bartling, Hunter Wallace, Bryson Ward 
@@ -56,5 +64,3 @@ warning is the same thing, just within the code and cannot be suppressed. The on
 the compile or run, we are unsure why it is there. It does not affect the code, and should be ignored (even though its extremely 
 annoying when coding).
 ``` 
-
-
