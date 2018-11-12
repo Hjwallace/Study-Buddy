@@ -1,7 +1,7 @@
 # Final.Project-nabartling-jeshallcross-hwallace-bward
 Final Project
 
-#Team Members
+# Team Members
 ```
 James Shallcross
 Nick Bartling
