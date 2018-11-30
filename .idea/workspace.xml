@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15da6e01-7f67-4597-b041-8082c6a990d8" name="Default Changelist" comment="Basic music player and text editor online">
-      <change afterPath="$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Final.Project-nabartling-jeshallcross-hwallace-bward.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Final.Project-nabartling-jeshallcross-hwallace-bward.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/background2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/bsu/cs222/MenuBarComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/bsu/cs222/MenuBarComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/bsu/cs222/colorful_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful_background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/bsu/cs222/background2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -165,88 +163,32 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="184467566">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="jpeg" value="1" />
+          <entry key="jpg" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="3" />
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
+            <state relative-caret-position="225">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/UserSide.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/TextEditor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/MenuBarComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="4" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/ComponentSide.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="123" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1515#1516#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -262,6 +204,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>maxam</find>
+    </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
@@ -281,7 +226,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Desktop/Final.Project-nabartling-jeshallcross-hwallace-bward/.idea/src/testing.java" />
+        <option value="$PROJECT_DIR$/.idea/src/testing.java" />
         <option value="$PROJECT_DIR$/.idea/src/testing.java" />
         <option value="$PROJECT_DIR$/.idea/src/edu/bsu/cs222/UI.java" />
         <option value="$PROJECT_DIR$/.idea/src/testingUI.java" />
@@ -307,9 +252,9 @@
         <option value="$PROJECT_DIR$/src/edu/bsu/cs222/ComponentSide.java" />
         <option value="$PROJECT_DIR$/src/edu/bsu/cs222/UserSide.java" />
         <option value="$PROJECT_DIR$/src/edu/bsu/cs222/bobRoss.css" />
-        <option value="$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java" />
         <option value="$PROJECT_DIR$/src/edu/bsu/cs222/MenuBarComponent.java" />
         <option value="$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful.css" />
+        <option value="$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java" />
       </list>
     </option>
   </component>
@@ -325,6 +270,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -358,14 +304,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543595574615" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543596414696" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -374,6 +319,13 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src_resources/edu/bsu/cs222" />
+      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\src_resources\edu\bsu\cs222" />
+      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\src_resources" />
+      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward" />
+      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\.idea\" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="edu.bsu.cs222" />
       <recent name="" />
@@ -381,13 +333,127 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\.idea\src\edu\bsu\cs222" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\src_resources\edu\bsu\cs222" />
-      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\src_resources" />
-      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward" />
-      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\.idea\" />
-      <recent name="C:\Users\Jesha\IdeaProjects\Final.Project-nabartling-jeshallcross-hwallace-bward\.idea" />
-    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Final.Project-nabartling-jeshallcross-hwallace-bward.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$1.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI$2.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/Final.Project-nabartling-jeshallcross-hwallace-bward/edu/bsu/cs222/mainUI.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/bsu/cs222/MenuBarComponent.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful_background.jpg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/bsu/cs222/colorful_background.jpg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -629,10 +695,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="832" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21529175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21459228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -642,7 +708,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.39973173" weight="0.16713881" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.39973173" visible="true" weight="0.16486487" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4976526" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -661,6 +727,36 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3297568" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21529175" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.39973173" visible="true" weight="0.16713881" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4976526" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291815" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49966466" weight="0.34163702" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3292683" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.6002683" side_tool="true" weight="0.35410765" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.6519115" weight="0.31586403" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3297568" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -715,8 +811,19 @@
     <MESSAGE value="Basic music player and text editor online" />
     <option name="LAST_COMMIT_MESSAGE" value="Basic music player and text editor online" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/Final.Project-nabartling-jeshallcross-hwallace-bward/.idea/src/testing.java" />
     <entry file="file://$PROJECT_DIR$/.idea/src/testing.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java" />
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/testingUI.java" />
@@ -760,13 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/UserSide.java" />
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/background.jpeg" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Optional.java" />
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/Connection.java" />
     <entry file="file://$PROJECT_DIR$/.idea/src/edu/bsu/cs222/ComponentSide.java" />
     <entry file="file://$PROJECT_DIR$/.idea/tests/edu/bsu/cs222/ButtonTest.java" />
@@ -803,16 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/ComponentSide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="123" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/UserSide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -822,25 +913,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="56" column="82" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/background2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/background.jpeg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/colorful_background.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -870,6 +942,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/ComponentSide.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src_resources/edu/bsu/cs222/bobRoss.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/background.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/bsu/cs222/MainUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

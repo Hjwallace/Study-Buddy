@@ -36,7 +36,6 @@ public class MainUI extends Application {
         primaryStage.setTitle("Study Buddy v1");
         VBox mainWindow = new VBox();
         HBox componentWindow = new HBox();
-        primaryStage.setMaximized(true);
 
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
