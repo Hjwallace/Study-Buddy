@@ -23,7 +23,7 @@ import java.util.Map;
 
 
 public class UserSide {
-    String chromeUserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36";
+    String googleUserAgent = "Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20200101 Firefox/99.0";
     WebView textAreaMain;
     WebEngine textEngine;
     //TextArea userText;
@@ -35,7 +35,7 @@ public class UserSide {
         textAreaMain = new WebView();
         textEngine = textAreaMain.getEngine();
         textEngine.setJavaScriptEnabled(true);
-        textEngine.setUserAgent(chromeUserAgent);
+        textEngine.setUserAgent(googleUserAgent);
         textEngine = textAreaMain.getEngine();
         textEngine.load("https://www.offidocs.com/?service=lang-en-en");
         userSide.setAlignment(Pos.TOP_LEFT);
@@ -44,7 +44,7 @@ public class UserSide {
         musicPlayer = new WebView();
         musicEngine = musicPlayer.getEngine();
         textEngine.setJavaScriptEnabled(true);
-        musicEngine.setUserAgent("Mozilla/5.0 (Linux x86_64) AppleWebKit/538.19 (KHTML, like Gecko) JavaFX/8.0 Safari/538.19");
+        musicEngine.setUserAgent("Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20200101 Firefox/99.0");
         musicEngine.load("https://www.last.fm");
 
         userSide.getChildren().addAll(textAreaMain,musicPlayer,connectionLabel);

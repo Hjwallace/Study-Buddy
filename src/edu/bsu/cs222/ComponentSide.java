@@ -11,11 +11,8 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class ComponentSide {
-    String googleUserAgent = "Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1";
-    String chromeUserAgent = "Mozilla/5.0 (Linux; Android 7.0; SM-G892A Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.107 Mobile Safari/537.36";
-    String youtubeUserAgent = "Mozilla/5.0 (Linux; Android 4.4.4; One Build/KTU84L.H4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.135 Mobile Safari/537.36";
-    String chromiumUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Mwendo/1.1.5 Safari/537.21";
-    String desktopUserAgent = "Mozilla/5.0 (Linux x86_64) AppleWebKit/538.19 (KHTML, like Gecko) JavaFX/8.0 Safari/538.19";
+    String googleUserAgent = "Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20200101 Firefox/99.0";
+    String youtubeUserAgent = "Mozilla/5.0 (Linux; Android 6.0.1; SM-N9100 Build/LRX22C) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13F69 Safari/601.1";
     WebView componentTop;
     WebView componentBottom;
     WebEngine engineTop;
@@ -64,12 +61,12 @@ public class ComponentSide {
         engineTop.load("https://www.espn.com");
     }
     public void GoToESPNBottom() {
-        engineBottom.setUserAgent(youtubeUserAgent);
+        engineBottom.setUserAgent(googleUserAgent);
         engineBottom.load("https://www.espn.com");
     }
 
     public void GoToPandoraTop() {
-        engineTop.setUserAgent(desktopUserAgent);
+        engineTop.setUserAgent(googleUserAgent);
         engineTop.load("https://www.last.fm/");
     }
 

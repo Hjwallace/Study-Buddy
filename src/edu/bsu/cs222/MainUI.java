@@ -57,7 +57,7 @@ public class MainUI extends Application {
         Node menuBar = menus.MenuStartup(webComponents, userComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
-        primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
+        primaryStage.setScene(new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1));
         String style = this.getClass().getResource("style.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
         mainWindow.heightProperty().addListener(new ChangeListener<Number>() {
