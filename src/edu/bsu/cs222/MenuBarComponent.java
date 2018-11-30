@@ -6,16 +6,31 @@ import javafx.scene.Node;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.VBox;
 
 public class MenuBarComponent {
     ComponentSide webComponents;
     UserSide userComponents;
 
-    public Node MenuStartup(ComponentSide webComponents, UserSide userComponents){
+    public Node MenuStartup(ComponentSide webComponents, UserSide userComponents, VBox mainWindow){
         MenuBar menuBar = new MenuBar();
-
         Menu menuEdit = new Menu("Edit");
         Menu menuView = new Menu("View");
+        MenuItem bobRossButton = new MenuItem("Bob Ross");
+        bobRossButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                setCssFile("bobRoss.css", mainWindow);
+            }
+        });
+        MenuItem colorfulButton = new MenuItem("Colorful");
+        colorfulButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                setCssFile("colorful.css", mainWindow);
+            }
+        });
+        menuView.getItems().addAll(bobRossButton, colorfulButton);
 
         Menu menuWindowTop = new Menu("Top Window");
         MenuItem youtubeButtonTop = new MenuItem("Youtube");
@@ -113,5 +128,10 @@ public class MenuBarComponent {
 
         menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
         return menuBar;
+    }
+    public void setCssFile(String file, VBox mainWindow) {
+        mainWindow.getStylesheets().clear();
+        String style = this.getClass().getResource(file).toExternalForm();
+        mainWindow.getStylesheets().add(style);
     }
 }

@@ -36,6 +36,7 @@ public class MainUI extends Application {
         primaryStage.setTitle("Study Buddy v1");
         VBox mainWindow = new VBox();
         HBox componentWindow = new HBox();
+        primaryStage.setMaximized(true);
 
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
@@ -54,7 +55,7 @@ public class MainUI extends Application {
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
 
         MenuBarComponent menus = new MenuBarComponent();
-        Node menuBar = menus.MenuStartup(webComponents, userComponents);
+        Node menuBar = menus.MenuStartup(webComponents, userComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         primaryStage.setScene(new Scene(mainWindow,screenWidth,screenHeight));
@@ -67,7 +68,7 @@ public class MainUI extends Application {
                 webComponents.componentTop.setPrefHeight(height/2.2);
                 webComponents.componentBottom.setPrefHeight(height/2.2);
                 userComponents.textAreaMain.setPrefHeight(height/1.5);
-                userComponents.musicPlayer.setPrefHeight(height/5);
+                userComponents.musicPlayer.setPrefHeight(height/4.5);
             }
         });
 
