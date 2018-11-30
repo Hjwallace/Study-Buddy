@@ -23,13 +23,12 @@ import java.util.Map;
 
 
 public class UserSide {
-    //String chromeUserAgent = "/Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
-
     String chromeUserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/51.0.2704.79 Chrome/51.0.2704.79 Safari/537.36";
     WebView textAreaMain;
     WebEngine textEngine;
     //TextArea userText;
-    TextArea musicPlayer;
+    WebView musicPlayer;
+    WebEngine musicEngine;
     public Node UserSideStartup(Label connectionLabel) throws IOException {
         //User Side
         VBox userSide = new VBox(10);
@@ -38,11 +37,15 @@ public class UserSide {
         textEngine.setJavaScriptEnabled(true);
         textEngine.setUserAgent(chromeUserAgent);
         textEngine = textAreaMain.getEngine();
-        textEngine.load("https://drive.google.com/drive/mobile");
+        textEngine.load("https://www.offidocs.com/?service=lang-en-en");
         userSide.setAlignment(Pos.TOP_LEFT);
         userSide.setPadding(new Insets(10,10,10,10));
         userSide.setFillWidth(true);
-        musicPlayer = new TextArea("Music box will be here");
+        musicPlayer = new WebView();
+        musicEngine = musicPlayer.getEngine();
+        textEngine.setJavaScriptEnabled(true);
+        musicEngine.setUserAgent("Mozilla/5.0 (Linux x86_64) AppleWebKit/538.19 (KHTML, like Gecko) JavaFX/8.0 Safari/538.19");
+        musicEngine.load("https://www.last.fm");
 
         userSide.getChildren().addAll(textAreaMain,musicPlayer,connectionLabel);
 

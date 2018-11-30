@@ -46,7 +46,12 @@ public class MenuBarComponent {
                 webComponents.GoToESPNTop();
             }
         });
-        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop);
+        MenuItem pandoraButtonTop = new MenuItem("Pandora");
+        pandoraButtonTop.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {webComponents.GoToPandoraTop();}
+        });
+        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, pandoraButtonTop);
 
         Menu menuWindowBottom = new Menu("Bottom Window");
         MenuItem youtubeButtonBottom = new MenuItem("Youtube");

@@ -29,6 +29,7 @@ public class MainUI extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
         double screenHeight = screenSize.getHeight();
         double screenWidth = screenSize.getWidth();
 
