@@ -1,9 +1,6 @@
 package edu.bsu.cs222;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -26,7 +23,7 @@ import java.util.Optional;
 public class MainUI extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
@@ -39,12 +36,7 @@ public class MainUI extends Application {
 
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
-        mainWindow.addEventFilter(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                connection.DisplayLabel(networkConnectionLabel);
-            }
-        });
+        mainWindow.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> connection.DisplayLabel(networkConnectionLabel));
         UserSide userComponents =new UserSide();
         Node userSide = userComponents.UserSideStartup(networkConnectionLabel);
 
@@ -54,32 +46,26 @@ public class MainUI extends Application {
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
 
         MenuBarComponent menus = new MenuBarComponent();
-        Node menuBar = menus.MenuStartup(webComponents, userComponents, mainWindow);
+        Node menuBar = menus.MenuStartup(webComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         primaryStage.setScene(new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1));
         String style = this.getClass().getResource("style.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
-        mainWindow.heightProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                double height = newValue.doubleValue();
-                webComponents.componentTop.setPrefHeight(height/2.2);
-                webComponents.componentBottom.setPrefHeight(height/2.2);
-                userComponents.textAreaMain.setPrefHeight(height/1.5);
-                userComponents.musicPlayer.setPrefHeight(height/4.5);
-            }
+        mainWindow.heightProperty().addListener((observable, oldValue, newValue) -> {
+            double height = newValue.doubleValue();
+            webComponents.componentTop.setPrefHeight(height/2.2);
+            webComponents.componentBottom.setPrefHeight(height/2.2);
+            userComponents.textAreaMain.setPrefHeight(height/1.5);
+            userComponents.musicPlayer.setPrefHeight(height/4.5);
         });
 
-        mainWindow.widthProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-                double width = newValue.doubleValue();
-                webComponents.componentTop.setPrefWidth(width/1.7);
-                webComponents.componentBottom.setPrefWidth(width/1.7);
-                userComponents.textAreaMain.setPrefWidth(width/1.9);
-                userComponents.musicPlayer.setPrefWidth(width/1.9);
-            }
+        mainWindow.widthProperty().addListener((observable, oldValue, newValue) -> {
+            double width = newValue.doubleValue();
+            webComponents.componentTop.setPrefWidth(width/1.7);
+            webComponents.componentBottom.setPrefWidth(width/1.7);
+            userComponents.textAreaMain.setPrefWidth(width/1.9);
+            userComponents.musicPlayer.setPrefWidth(width/1.9);
         });
 
         primaryStage.show();

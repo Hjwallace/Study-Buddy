@@ -1,24 +1,21 @@
 package edu.bsu.cs222;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-public class ComponentSide {
-    String googleUserAgent = "Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20200101 Firefox/99.0";
-    String youtubeUserAgent = "Mozilla/5.0 (Linux; Android 6.0.1; SM-N9100 Build/LRX22C) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13F69 Safari/601.1";
+class ComponentSide {
+    private String googleUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36";
+    private String youtubeUserAgent = "Mozilla/5.0 (Linux; Android 6.0.1; SM-N9100 Build/LRX22C) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13F69 Safari/601.1";
     WebView componentTop;
     WebView componentBottom;
-    WebEngine engineTop;
-    WebEngine engineBottom;
+    private WebEngine engineTop;
+    private WebEngine engineBottom;
 
-    public Node ComponentSideStartup() {
+    Node ComponentSideStartup() {
         VBox componentSide = new VBox(10);
         componentTop = new WebView();
         componentBottom = new WebView();
@@ -31,41 +28,41 @@ public class ComponentSide {
         componentSide.setPadding(new Insets(10,10,10,10));
         return componentSide;
     }
-    public void GoToYoutubeTop() {
+    void GoToYoutubeTop() {
         engineTop.setUserAgent(youtubeUserAgent);
         engineTop.load("https://www.youtube.com");
     }
-    public void GoToYoutubeBottom() {
+    void GoToYoutubeBottom() {
         engineBottom.setUserAgent(youtubeUserAgent);
         engineBottom.load("https://www.youtube.com");
     }
-    public void GoToGoogleTop() {
+    void GoToGoogleTop() {
         engineTop.setUserAgent(googleUserAgent);
         engineTop.load("https://www.google.com");
     }
-    public void GoToGoogleBottom() {
+    void GoToGoogleBottom() {
         engineBottom.setUserAgent(googleUserAgent);
         engineBottom.load("https://www.google.com");
     }
 
-    public void GoToBsuTop() {
+    void GoToBsuTop() {
         engineTop.setUserAgent(googleUserAgent);
         engineTop.load("https://my.bsu.edu/");
     }
-    public void GoToBsuBottom() {
+    void GoToBsuBottom() {
         engineBottom.setUserAgent(googleUserAgent);
         engineBottom.load("https://my.bsu.edu/");
     }
-    public void GoToESPNTop() {
+    void GoToESPNTop() {
         engineTop.setUserAgent(googleUserAgent);
         engineTop.load("https://www.espn.com");
     }
-    public void GoToESPNBottom() {
+    void GoToESPNBottom() {
         engineBottom.setUserAgent(googleUserAgent);
         engineBottom.load("https://www.espn.com");
     }
 
-    public void GoToPandoraTop() {
+    void GoToPandoraTop() {
         engineTop.setUserAgent(googleUserAgent);
         engineTop.load("https://www.last.fm/");
     }

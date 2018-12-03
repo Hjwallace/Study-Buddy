@@ -8,7 +8,15 @@ public class ConnectionTest {
     public void TestConnection() {
         Connection connection = new Connection();
         boolean connectionStatus = connection.findConnection();
-        Assert.assertEquals(connectionStatus, true);
+        Assert.assertTrue(connectionStatus);
 
+    }
+
+    @Test
+    public void findConnection() {
+    }
+
+    @Test
+    public void displayLabel() {
     }
 }
