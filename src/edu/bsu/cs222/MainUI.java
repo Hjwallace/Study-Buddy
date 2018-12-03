@@ -1,6 +1,7 @@
 package edu.bsu.cs222;
 
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -10,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
@@ -49,7 +51,8 @@ public class MainUI extends Application {
         Node menuBar = menus.MenuStartup(webComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
         mainWindow.getChildren().addAll(menuBar,componentWindow);
-        primaryStage.setScene(new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1));
+        final Scene scene = new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1);
+        primaryStage.setScene(scene);
         String style = this.getClass().getResource("style.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
         mainWindow.heightProperty().addListener((observable, oldValue, newValue) -> {

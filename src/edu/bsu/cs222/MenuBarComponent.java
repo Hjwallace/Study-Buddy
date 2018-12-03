@@ -1,6 +1,7 @@
 package edu.bsu.cs222;
 
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -45,18 +46,26 @@ class MenuBarComponent {
         menuWindowBottom.getItems().addAll(youtubeButtonBottom, googleButtonBottom, bsuButtonBottom, espnButtonBottom);
 
         Menu menuHelp = new Menu("Help");
-        MenuItem getHelpButton = new MenuItem("Get Help");
-        getHelpButton.setOnAction(event -> System.out.println("The get help button works"));
-        menuHelp.getItems().add(getHelpButton);
-
-        Menu menuFile = new Menu("File");
-        MenuItem openFile = new MenuItem("Open File");
-        openFile.setOnAction(t -> System.out.println("The open file button works"));
-        MenuItem saveFile = new MenuItem("Save File");
-        saveFile.setOnAction(t -> System.out.println("The save file button works"));
-        menuFile.getItems().addAll(openFile,saveFile);
-
-        menuBar.getMenus().addAll(menuFile,menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
+        MenuItem supportEmailButton = new MenuItem("Get Support Email");
+        supportEmailButton.setOnAction(event -> {
+            Alert email = new Alert(Alert.AlertType.INFORMATION);
+            email.show();
+            email.setTitle("Support Email");
+            email.setHeaderText("StudyBuddyHelp@hotmail.com");
+            email.setContentText("A member of our team will respond to you ASAP");
+        });
+        MenuItem instructionsButton = new MenuItem("Instructions");
+        instructionsButton.setOnAction(event -> {
+            Alert instructions = new Alert(Alert.AlertType.INFORMATION);
+            instructions.show();
+            instructions.setContentText("This application uses WebViews.\n To go back a page, click in white space and press BACKSPACE." +
+                    " \nThe text editor is an online editor that requires either a DropBox account or an account through their site to access files." +
+                    "\nThis is to save space on computers.");
+            instructions.setHeight(600);
+            instructions.setWidth(800);
+        });
+        menuHelp.getItems().addAll(supportEmailButton, instructionsButton);
+        menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
         return menuBar;
     }
     private void setCssFile(String file, VBox mainWindow) {

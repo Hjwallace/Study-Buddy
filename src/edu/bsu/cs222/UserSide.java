@@ -10,7 +10,6 @@ import javafx.scene.web.WebView;
 
 class UserSide {
     WebView textAreaMain;
-    //TextArea userText;
     WebView musicPlayer;
 
     Node UserSideStartup(Label connectionLabel) {
@@ -23,15 +22,16 @@ class UserSide {
         textEngine.setUserAgent(googleUserAgent);
         textEngine = textAreaMain.getEngine();
         textEngine.load("https://www.offidocs.com/?service=lang-en-en");
-        userSide.setAlignment(Pos.TOP_LEFT);
-        userSide.setPadding(new Insets(10,10,10,10));
-        userSide.setFillWidth(true);
         musicPlayer = new WebView();
+        musicPlayer.setZoom(.75);
         WebEngine musicEngine = musicPlayer.getEngine();
         textEngine.setJavaScriptEnabled(true);
         musicEngine.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36");
         musicEngine.load("https://www.last.fm");
 
+        userSide.setAlignment(Pos.TOP_LEFT);
+        userSide.setPadding(new Insets(10,10,10,10));
+        userSide.setFillWidth(true);
         userSide.getChildren().addAll(textAreaMain,musicPlayer,connectionLabel);
 
         return userSide;
