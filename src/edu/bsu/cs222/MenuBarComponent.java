@@ -13,11 +13,48 @@ class MenuBarComponent {
         MenuBar menuBar = new MenuBar();
         Menu menuEdit = new Menu("Edit");
         Menu menuView = new Menu("View");
+
         MenuItem bobRossButton = new MenuItem("Bob Ross");
         bobRossButton.setOnAction(event -> setCssFile("bobRoss.css", mainWindow));
         MenuItem colorfulButton = new MenuItem("Colorful");
         colorfulButton.setOnAction(event -> setCssFile("colorful.css", mainWindow));
-        menuView.getItems().addAll(bobRossButton, colorfulButton);
+
+        //Nature
+        Menu natureButton = new Menu("Nature");
+
+        MenuItem forrestTheme = new MenuItem("Forrest");
+        forrestTheme.setOnAction(event -> setCssFile("forrest.css", mainWindow));
+
+        MenuItem oceanTheme = new MenuItem("Ocean");
+        oceanTheme.setOnAction(event -> setCssFile("ocean.css", mainWindow));
+
+        MenuItem mountainTheme = new MenuItem("Mountain");
+        mountainTheme.setOnAction(event -> setCssFile("mountains.css", mainWindow));
+
+        natureButton.getItems().addAll(forrestTheme,oceanTheme,mountainTheme);
+        //Nature end
+
+        //Flags
+        Menu flagButton = new Menu("Flags");
+        MenuItem americanFlag = new MenuItem("America");
+        americanFlag.setOnAction(event -> setCssFile("america.css", mainWindow));
+
+        MenuItem mexicanFlag = new MenuItem("Mexico");
+        mexicanFlag.setOnAction(event -> setCssFile("mexico.css", mainWindow));
+
+        MenuItem canadianFlag = new MenuItem("Canada");
+        canadianFlag.setOnAction(event -> setCssFile("canada.css", mainWindow));
+
+        MenuItem chineseFlag = new MenuItem("China");
+        chineseFlag.setOnAction(event -> setCssFile("china.css", mainWindow));
+
+        MenuItem russianFlag = new MenuItem("Russia");
+        russianFlag.setOnAction(event -> setCssFile("russia.css", mainWindow));
+        flagButton.getItems().addAll(americanFlag,mexicanFlag,canadianFlag,chineseFlag,russianFlag);
+        //end Flags
+
+
+        menuView.getItems().addAll(bobRossButton,colorfulButton,natureButton,flagButton);
 
         Menu menuWindowTop = new Menu("Top Window");
         MenuItem youtubeButtonTop = new MenuItem("Youtube");
@@ -28,9 +65,9 @@ class MenuBarComponent {
         bsuButtonTop.setOnAction(event -> webComponents.GoToBsuTop());
         MenuItem espnButtonTop = new MenuItem("ESPN");
         espnButtonTop.setOnAction(event -> webComponents.GoToESPNTop());
-        MenuItem pandoraButtonTop = new MenuItem("Pandora");
-        pandoraButtonTop.setOnAction(event -> webComponents.GoToPandoraTop());
-        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, pandoraButtonTop);
+        MenuItem musicButtonTop = new MenuItem("LastFM");
+        musicButtonTop.setOnAction(event -> webComponents.GoToPandoraTop());
+        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, musicButtonTop);
 
         Menu menuWindowBottom = new Menu("Bottom Window");
         MenuItem youtubeButtonBottom = new MenuItem("Youtube");

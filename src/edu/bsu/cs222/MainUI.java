@@ -39,7 +39,7 @@ public class MainUI extends Application {
         Connection connection = new Connection();
         Label networkConnectionLabel = new Label();
         mainWindow.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> connection.DisplayLabel(networkConnectionLabel));
-        UserSide userComponents =new UserSide();
+        UserSide userComponents = new UserSide();
         Node userSide = userComponents.UserSideStartup(networkConnectionLabel);
 
         ComponentSide webComponents = new ComponentSide();
@@ -50,6 +50,7 @@ public class MainUI extends Application {
         MenuBarComponent menus = new MenuBarComponent();
         Node menuBar = menus.MenuStartup(webComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
+
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         final Scene scene = new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1);
         primaryStage.setScene(scene);

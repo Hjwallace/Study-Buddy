@@ -1,0 +1,6 @@
+.root {
+     -fx-background-image: url("forrest.jpeg");
+     -fx-background-repeat: no-repeat;
+     -fx-background-size: cover, auto;
+}
+

@@ -1,0 +1,6 @@
+.root {
+     -fx-background-image: url("ocean.jpg");
+     -fx-background-repeat: no-repeat;
+     -fx-background-size: cover, auto;
+}
+

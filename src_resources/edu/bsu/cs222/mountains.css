@@ -1,0 +1,6 @@
+.root {
+     -fx-background-image: url("mountains.jpg");
+     -fx-background-repeat: no-repeat;
+     -fx-background-size: cover, auto;
+}
+
