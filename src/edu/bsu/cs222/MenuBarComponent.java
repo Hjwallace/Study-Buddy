@@ -61,8 +61,8 @@ class MenuBarComponent {
             instructions.setContentText("This application uses WebViews.\n To go back a page, click in white space and press BACKSPACE." +
                     " \nThe text editor is an online editor that requires either a DropBox account or an account through their site to access files." +
                     "\nThis is to save space on computers.");
-            instructions.setHeight(600);
-            instructions.setWidth(800);
+            instructions.setHeight(400);
+            instructions.setWidth(400);
         });
         menuHelp.getItems().addAll(supportEmailButton, instructionsButton);
         menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
