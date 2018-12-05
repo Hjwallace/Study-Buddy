@@ -48,7 +48,7 @@ public class MainUI extends Application {
         Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
 
         MenuBarComponent menus = new MenuBarComponent();
-        Node menuBar = menus.MenuStartup(webComponents, mainWindow);
+        Node menuBar = menus.MenuStartup(webComponents,userComponents, mainWindow);
         componentWindow.getChildren().addAll(userSide,seperator,componentSide);
 
         mainWindow.getChildren().addAll(menuBar,componentWindow);

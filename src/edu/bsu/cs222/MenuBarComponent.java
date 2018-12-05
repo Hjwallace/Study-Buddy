@@ -1,5 +1,7 @@
 package edu.bsu.cs222;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
@@ -9,7 +11,7 @@ import javafx.scene.layout.VBox;
 
 class MenuBarComponent {
 
-    Node MenuStartup(ComponentSide webComponents, VBox mainWindow){
+    Node MenuStartup(ComponentSide webComponents,UserSide userComponents, VBox mainWindow){
         MenuBar menuBar = new MenuBar();
         Menu menuEdit = new Menu("Edit");
         Menu menuView = new Menu("View");
@@ -52,6 +54,62 @@ class MenuBarComponent {
         russianFlag.setOnAction(event -> setCssFile("russia.css", mainWindow));
         flagButton.getItems().addAll(americanFlag,mexicanFlag,canadianFlag,chineseFlag,russianFlag);
         //end Flags
+
+        //Visibility
+        Menu menuVisibilityButton = new Menu("Visibility");
+        MenuItem textAreaVisibility = new MenuItem("Toggle Text Area");
+        textAreaVisibility.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (userComponents.textAreaMain.isVisible() == true){
+                    userComponents.textAreaMain.setVisible(false);
+                }
+                else{
+                    userComponents.textAreaMain.setVisible(true);
+                }
+            }
+        });
+        MenuItem musicAreaVisibility = new MenuItem("Toggle Music Area");
+        musicAreaVisibility.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (userComponents.musicPlayer.isVisible() == true){
+                    userComponents.musicPlayer.setVisible(false);
+                }
+                else{
+                    userComponents.musicPlayer.setVisible(true);
+                }
+            }
+        });
+
+        MenuItem topWebViewBoxVisibility = new MenuItem("Toggle Top Web Area");
+        topWebViewBoxVisibility.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (webComponents.componentTop.isVisible() == true){
+                    webComponents.componentTop.setVisible(false);
+                }
+                else{
+                    webComponents.componentTop.setVisible(true);
+                }
+            }
+        });
+
+        MenuItem bottomWebViewBoxVisibility = new MenuItem("Toggle Bottom Web Area");
+        bottomWebViewBoxVisibility.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (webComponents.componentBottom.isVisible() == true){
+                    webComponents.componentBottom.setVisible(false);
+                }
+                else{
+                    webComponents.componentBottom.setVisible(true);
+                }
+            }
+        });
+
+        menuVisibilityButton.getItems().addAll(textAreaVisibility,musicAreaVisibility,topWebViewBoxVisibility,bottomWebViewBoxVisibility);
+        //End Vibibility
 
 
         menuView.getItems().addAll(bobRossButton,colorfulButton,natureButton,flagButton);
@@ -102,7 +160,7 @@ class MenuBarComponent {
             instructions.setWidth(400);
         });
         menuHelp.getItems().addAll(supportEmailButton, instructionsButton);
-        menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuHelp);
+        menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuVisibilityButton,menuHelp);
         return menuBar;
     }
     private void setCssFile(String file, VBox mainWindow) {
