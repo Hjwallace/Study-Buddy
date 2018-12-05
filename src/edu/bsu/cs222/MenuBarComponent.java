@@ -61,11 +61,11 @@ class MenuBarComponent {
         textAreaVisibility.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (userComponents.textAreaMain.isVisible() == true){
-                    userComponents.textAreaMain.setVisible(false);
+                if (userComponents.leftWebView.isVisible() == true){
+                    userComponents.leftWebView.setVisible(false);
                 }
                 else{
-                    userComponents.textAreaMain.setVisible(true);
+                    userComponents.leftWebView.setVisible(true);
                 }
             }
         });
@@ -116,29 +116,42 @@ class MenuBarComponent {
 
         Menu menuWindowTop = new Menu("Top Window");
         MenuItem youtubeButtonTop = new MenuItem("Youtube");
-        youtubeButtonTop.setOnAction(event -> webComponents.GoToYoutubeTop());
+        youtubeButtonTop.setOnAction(event -> WebViewChanger.GoToYoutube(webComponents.engineTop));
         MenuItem googleButtonTop = new MenuItem("Google");
-        googleButtonTop.setOnAction(event -> webComponents.GoToGoogleTop());
+        googleButtonTop.setOnAction(event -> WebViewChanger.GoToGoogle(webComponents.engineTop));
         MenuItem bsuButtonTop = new MenuItem("myBSU");
-        bsuButtonTop.setOnAction(event -> webComponents.GoToBsuTop());
-        MenuItem espnButtonTop = new MenuItem("ESPN");
-        espnButtonTop.setOnAction(event -> webComponents.GoToESPNTop());
-        MenuItem musicButtonTop = new MenuItem("LastFM");
-        musicButtonTop.setOnAction(event -> webComponents.GoToPandoraTop());
-        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, espnButtonTop, musicButtonTop);
+        bsuButtonTop.setOnAction(event -> WebViewChanger.GoToBSU(webComponents.engineTop));
+        MenuItem offidocButtonTop = new MenuItem("Offidocs");
+        offidocButtonTop.setOnAction(event -> WebViewChanger.GoToOffidocs(webComponents.engineTop));
+        MenuItem wikipediaButtonTop = new MenuItem("Wikipedia");
+        wikipediaButtonTop.setOnAction(event -> WebViewChanger.GoToWikipedia(webComponents.engineTop));
+        menuWindowTop.getItems().addAll(youtubeButtonTop, googleButtonTop, bsuButtonTop, offidocButtonTop, wikipediaButtonTop);
 
         Menu menuWindowBottom = new Menu("Bottom Window");
         MenuItem youtubeButtonBottom = new MenuItem("Youtube");
-        youtubeButtonBottom.setOnAction(event -> webComponents.GoToYoutubeBottom());
-
+        youtubeButtonBottom.setOnAction(event -> WebViewChanger.GoToYoutube(webComponents.engineBottom));
         MenuItem googleButtonBottom = new MenuItem("Google");
-        googleButtonBottom.setOnAction(event -> webComponents.GoToGoogleBottom());
-
+        googleButtonBottom.setOnAction(event -> WebViewChanger.GoToGoogle(webComponents.engineBottom));
         MenuItem bsuButtonBottom = new MenuItem("myBSU");
-        bsuButtonBottom.setOnAction(event -> webComponents.GoToBsuBottom());
-        MenuItem espnButtonBottom = new MenuItem("ESPN");
-        espnButtonBottom.setOnAction(event -> webComponents.GoToESPNBottom());
-        menuWindowBottom.getItems().addAll(youtubeButtonBottom, googleButtonBottom, bsuButtonBottom, espnButtonBottom);
+        bsuButtonBottom.setOnAction(event -> WebViewChanger.GoToBSU(webComponents.engineBottom));
+        MenuItem offidocButtonBottom = new MenuItem("Offidocs");
+        offidocButtonBottom.setOnAction(event -> WebViewChanger.GoToOffidocs(webComponents.engineBottom));
+        MenuItem wikipediaButtonBottom = new MenuItem("Wikipedia");
+        wikipediaButtonBottom.setOnAction(event -> WebViewChanger.GoToWikipedia(webComponents.engineBottom));
+        menuWindowBottom.getItems().addAll(youtubeButtonBottom, googleButtonBottom, bsuButtonBottom, offidocButtonBottom, wikipediaButtonBottom);
+
+        Menu menuWindowLeft = new Menu("Left Window");
+        MenuItem youtubeButtonLeft = new MenuItem("Youtube");
+        youtubeButtonLeft.setOnAction(event -> WebViewChanger.GoToYoutube(userComponents.engineLeft));
+        MenuItem googleButtonLeft = new MenuItem("Google");
+        googleButtonLeft.setOnAction(event -> WebViewChanger.GoToGoogle(userComponents.engineLeft));
+        MenuItem bsuButtonLeft = new MenuItem("myBSU");
+        bsuButtonLeft.setOnAction(event -> WebViewChanger.GoToBSU(userComponents.engineLeft));
+        MenuItem offidocButtonLeft = new MenuItem("Offidocs");
+        offidocButtonLeft.setOnAction(event -> WebViewChanger.GoToOffidocs(userComponents.engineLeft));
+        MenuItem wikipediaButtonLeft = new MenuItem("Wikipedia");
+        wikipediaButtonLeft.setOnAction(event -> WebViewChanger.GoToWikipedia(userComponents.engineLeft));
+        menuWindowLeft.getItems().addAll(youtubeButtonLeft, googleButtonLeft, bsuButtonLeft, offidocButtonLeft, wikipediaButtonLeft);
 
         Menu menuHelp = new Menu("Help");
         MenuItem supportEmailButton = new MenuItem("Get Support Email");
@@ -160,7 +173,7 @@ class MenuBarComponent {
             instructions.setWidth(400);
         });
         menuHelp.getItems().addAll(supportEmailButton, instructionsButton);
-        menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuVisibilityButton,menuHelp);
+        menuBar.getMenus().addAll(menuEdit,menuView,menuWindowTop,menuWindowBottom,menuWindowLeft, menuVisibilityButton,menuHelp);
         return menuBar;
     }
     private void setCssFile(String file, VBox mainWindow) {

@@ -60,7 +60,7 @@ public class MainUI extends Application {
             double height = newValue.doubleValue();
             webComponents.componentTop.setPrefHeight(height/2.2);
             webComponents.componentBottom.setPrefHeight(height/2.2);
-            userComponents.textAreaMain.setPrefHeight(height/1.5);
+            userComponents.leftWebView.setPrefHeight(height/1.5);
             userComponents.musicPlayer.setPrefHeight(height/4.5);
         });
 
@@ -68,7 +68,7 @@ public class MainUI extends Application {
             double width = newValue.doubleValue();
             webComponents.componentTop.setPrefWidth(width/1.7);
             webComponents.componentBottom.setPrefWidth(width/1.7);
-            userComponents.textAreaMain.setPrefWidth(width/1.9);
+            userComponents.leftWebView.setPrefWidth(width/1.9);
             userComponents.musicPlayer.setPrefWidth(width/1.9);
         });
 
