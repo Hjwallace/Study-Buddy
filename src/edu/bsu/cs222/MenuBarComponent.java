@@ -1,7 +1,5 @@
 package edu.bsu.cs222;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
@@ -58,58 +56,46 @@ class MenuBarComponent {
         //Visibility
         Menu menuVisibilityButton = new Menu("Visibility");
         MenuItem textAreaVisibility = new MenuItem("Toggle Text Area");
-        textAreaVisibility.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (userComponents.leftWebView.isVisible() == true){
-                    userComponents.leftWebView.setVisible(false);
-                }
-                else{
-                    userComponents.leftWebView.setVisible(true);
-                }
+        textAreaVisibility.setOnAction(event -> {
+            if (userComponents.leftWebView.isVisible()){
+                userComponents.leftWebView.setVisible(false);
+            }
+            else{
+                userComponents.leftWebView.setVisible(true);
             }
         });
         MenuItem musicAreaVisibility = new MenuItem("Toggle Music Area");
-        musicAreaVisibility.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (userComponents.musicPlayer.isVisible() == true){
-                    userComponents.musicPlayer.setVisible(false);
-                }
-                else{
-                    userComponents.musicPlayer.setVisible(true);
-                }
+        musicAreaVisibility.setOnAction(event -> {
+            if (userComponents.musicPlayer.isVisible()){
+                userComponents.musicPlayer.setVisible(false);
+            }
+            else{
+                userComponents.musicPlayer.setVisible(true);
             }
         });
 
         MenuItem topWebViewBoxVisibility = new MenuItem("Toggle Top Web Area");
-        topWebViewBoxVisibility.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (webComponents.componentTop.isVisible() == true){
-                    webComponents.componentTop.setVisible(false);
-                }
-                else{
-                    webComponents.componentTop.setVisible(true);
-                }
+        topWebViewBoxVisibility.setOnAction(event -> {
+            if (webComponents.componentTop.isVisible()){
+                webComponents.componentTop.setVisible(false);
+            }
+            else{
+                webComponents.componentTop.setVisible(true);
             }
         });
 
         MenuItem bottomWebViewBoxVisibility = new MenuItem("Toggle Bottom Web Area");
-        bottomWebViewBoxVisibility.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if (webComponents.componentBottom.isVisible() == true){
-                    webComponents.componentBottom.setVisible(false);
-                }
-                else{
-                    webComponents.componentBottom.setVisible(true);
-                }
+        bottomWebViewBoxVisibility.setOnAction(event -> {
+            if (webComponents.componentBottom.isVisible()){
+                webComponents.componentBottom.setVisible(false);
+            }
+            else{
+                webComponents.componentBottom.setVisible(true);
             }
         });
 
         menuVisibilityButton.getItems().addAll(textAreaVisibility,musicAreaVisibility,topWebViewBoxVisibility,bottomWebViewBoxVisibility);
-        //End Vibibility
+        //End Visibility
 
 
         menuView.getItems().addAll(bobRossButton,colorfulButton,natureButton,flagButton);

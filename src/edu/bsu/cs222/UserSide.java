@@ -9,9 +9,9 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 class UserSide {
-    protected WebView leftWebView;
-    protected WebView musicPlayer;
-    protected WebEngine engineLeft;
+    WebView leftWebView;
+    WebView musicPlayer;
+    WebEngine engineLeft;
 
     Node UserSideStartup(Label connectionLabel) {
         //User Side
