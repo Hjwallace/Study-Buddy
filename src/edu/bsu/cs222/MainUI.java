@@ -45,11 +45,11 @@ public class MainUI extends Application {
         ComponentSide webComponents = new ComponentSide();
         Node componentSide = webComponents.ComponentSideStartup();
 
-        Line seperator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
+        Line separator = LineBuilder.create().startX(screenWidth/2).startY(0).endX((screenWidth/2)+1).endY(screenHeight).fill(Color.BLACK).build();
 
         MenuBarComponent menus = new MenuBarComponent();
         Node menuBar = menus.MenuStartup(webComponents,userComponents, mainWindow);
-        componentWindow.getChildren().addAll(userSide,seperator,componentSide);
+        componentWindow.getChildren().addAll(userSide,separator,componentSide);
 
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         final Scene scene = new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1);
