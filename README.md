@@ -14,10 +14,16 @@ Bryson Ward
 
 # Features:
 ```
- Text box with formatting with the ability to open and save to .txt files
+ Online text editor with Word functionality
  Music Integration
- Two windows for web browsing  
- Supports video players
+ Three windows for web browsing
+ Supports YouTube
+```
+
+# Support
+```
+To contact our group for help, there is an button under the help menu with an email in it.
+Additional information on how the program functions is also under the help menu.
 ```
 # Idea
 ```
@@ -49,17 +55,18 @@ To run the program, JDK 1.8 must be set to the default SDK. To do this, go to FI
 JDK1.8 is installed and selected.
 ```
 
-# Iteration 2 completed task list
+# Iteration 3 completed task list
 ```
-Implement Dynamic Network Checks
-WIP text editor
-WebView static video implementation
+Online Text Editor
+Music Player
+Disable/enable components
+Button Functionality
+Multiple backgrounds w/ easy swapping
 ```
 
 # Known Errors and Warnings
 ```
-We have one warning supressed, which is the LineBuilder, and it is only deprecated because JavaFX is being phased out. The unsupressed 
-warning is the same thing, just within the code and cannot be suppressed. The only error we are getting within the code does not affect 
-the compile or run, we are unsure why it is there. It does not affect the code, and should be ignored (even though its extremely 
-annoying when coding).
-``` 
+We have one warning suppressed, which is the LineBuilder, and it is only deprecated because JavaFX is being phased out. The unsupressed
+warning is the same thing, just within the code and cannot be suppressed.
+```
+

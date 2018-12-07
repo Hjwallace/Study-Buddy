@@ -1,7 +1,6 @@
 package edu.bsu.cs222;
 
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -11,7 +10,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.LineBuilder;
 import javafx.stage.Stage;
@@ -32,7 +30,7 @@ public class MainUI extends Application {
         double screenHeight = screenSize.getHeight();
         double screenWidth = screenSize.getWidth();
 
-        primaryStage.setTitle("Study Buddy v1");
+        primaryStage.setTitle("Study Buddy v3");
         VBox mainWindow = new VBox();
         HBox componentWindow = new HBox();
 
@@ -54,7 +52,7 @@ public class MainUI extends Application {
         mainWindow.getChildren().addAll(menuBar,componentWindow);
         final Scene scene = new Scene(mainWindow,screenWidth/1.1,screenHeight/1.1);
         primaryStage.setScene(scene);
-        String style = this.getClass().getResource("style.css").toExternalForm();
+        String style = this.getClass().getResource("colorful.css").toExternalForm();
         mainWindow.getStylesheets().add(style);
         mainWindow.heightProperty().addListener((observable, oldValue, newValue) -> {
             double height = newValue.doubleValue();
@@ -74,11 +72,11 @@ public class MainUI extends Application {
 
         primaryStage.show();
         primaryStage.setOnCloseRequest((WindowEvent event1) -> {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("WAIT");
-            alert.setHeaderText("Are you sure you want to close?");
-            alert.setContentText("Make sure you have saved and finished everything you wanted!");
-            Optional<ButtonType> result = alert.showAndWait();
+            Alert closeAlert = new Alert(Alert.AlertType.CONFIRMATION);
+            closeAlert.setTitle("WAIT");
+            closeAlert.setHeaderText("Are you sure you want to close?");
+            closeAlert.setContentText("Make sure you have saved and finished everything you wanted!");
+            Optional<ButtonType> result = closeAlert.showAndWait();
             if (result.get() == ButtonType.OK){
                 System.out.println("Closing");
             } else {

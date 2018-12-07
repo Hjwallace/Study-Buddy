@@ -11,7 +11,7 @@ public class WebViewChanger {
         engine.load("https://www.youtube.com");
     }
     public static void GoToGoogle(WebEngine engine) {
-        engine.setUserAgent(googleUserAgent);
+        engine.setUserAgent(youtubeUserAgent);
         engine.load("https://www.google.com");
     }
     public static void GoToBSU(WebEngine engine) {

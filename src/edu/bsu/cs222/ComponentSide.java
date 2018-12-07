@@ -25,7 +25,7 @@ class ComponentSide {
         engineBottom.setJavaScriptEnabled(true);
         engineTop.setUserAgent(youtubeUserAgent);
         engineTop.load("https://www.youtube.com");
-        engineBottom.setUserAgent(googleUserAgent);
+        engineBottom.setUserAgent(youtubeUserAgent);
         engineBottom.load("https://www.google.com");
         componentSide.getChildren().addAll(componentTop,componentBottom);
         componentSide.setAlignment(Pos.TOP_RIGHT);
