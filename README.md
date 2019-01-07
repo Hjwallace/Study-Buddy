@@ -49,24 +49,4 @@ music they desire.
 When all is done, the user can export whatever content they have created in the text box and save it where ever need be so that they can 
 use it for future projects or store it for later use.
 ```
-# Run Instructions
-```
-To run the program, JDK 1.8 must be set to the default SDK. To do this, go to FILE> PROJECT STRUCTURE> SDK> make sure a version of 
-JDK1.8 is installed and selected.
-```
-
-# Iteration 3 completed task list
-```
-Online Text Editor
-Music Player
-Disable/enable components
-Button Functionality
-Multiple backgrounds w/ easy swapping
-```
-
-# Known Errors and Warnings
-```
-We have one warning suppressed, which is the LineBuilder, and it is only deprecated because JavaFX is being phased out. The unsupressed
-warning is the same thing, just within the code and cannot be suppressed.
-```
 
